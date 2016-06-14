@@ -94,7 +94,11 @@ namespace DAL
             return dt;
         }
 
-        //
+        /// <summary>
+        /// 删除新闻类别（连同其下的新闻一同删除）
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public bool Delete(string id)
         {
             bool flag = false;
