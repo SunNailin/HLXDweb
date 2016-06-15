@@ -16,9 +16,9 @@ namespace DAL
     /// <summary>
     /// 公司简介表操作类
     /// </summary>
-    class IntroTypeDAO
+    public class IntroTypeDAO
     {
-       private SQLHelper sqlhelper = null;
+        private SQLHelper sqlhelper = null;
         public IntroTypeDAO()
         {
             sqlhelper = new SQLHelper();
