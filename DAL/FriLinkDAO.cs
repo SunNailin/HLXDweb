@@ -72,12 +72,15 @@ namespace DAL
         /// <summary>
         /// 判断类别名称是否已经存在
         /// </summary>
-        /// <param name="tpName">简介类别名称</param>
+        /// <param name="flTitle">友情链接名称</param>
         /// <returns></returns>
-        public bool IsExists(string tpName)
+        public bool IsExists(string flTitle)
         {
             bool flag = false;
-            string sql = "select * from intro_type where [intro_type_name]='" + tpName + "'";
+            string sql = "select * from frilink where [frilink_title]=@flTitle ";
+            SqlParameter[] paras = new SqlParameter[]{
+                  new SqlParameter("@flTitle",flTitle)
+            };
             DataTable dt = sqlhelper.ExecuteQuery(sql);
             if (dt.Rows.Count > 0)
             {
@@ -87,26 +90,26 @@ namespace DAL
         }
 
         /// <summary>
-        /// 取出所有新闻类别
+        /// 取出所有友情链接
         /// </summary>
         /// <returns>返回查询到的数据</returns>
         public DataTable SelectAll()
         {
             DataTable dt = new DataTable();
-            string sql = "select * from news_type";
+            string sql = "select * from frilink";
             dt = sqlhelper.ExecuteQuery(sql);
             return dt;
         }
 
         /// <summary>
-        /// 删除新闻类别（连同其下的新闻一同删除）
+        /// 删除友情链接
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
         public bool Delete(string id)
         {
             bool flag = false;
-            string sql = "delete from news_type where news_type_id= @id";
+            string sql = "delete from frilink where frilink_id= @id";
             SqlParameter[] paras = new SqlParameter[]{
                   new SqlParameter("@id",id)
             };

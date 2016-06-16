@@ -38,7 +38,7 @@ namespace HLXDweb
             string sql = "select * from news_type";
             string tpName = TextBox1.Text;
             string id = TextBox2.Text;
-            NewsType newsTp = new NewsType (id ,tpName);
+            NewsType newsTp = new NewsType (tpName);
             //链接数据库
             Getdata(sql);
             bool b = new NewsTypeDAO().Delete(id);

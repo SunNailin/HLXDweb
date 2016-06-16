@@ -25,7 +25,7 @@ namespace DAL
         }
 
         /// <summary>
-        /// 增加类别
+        /// 修改网页信息
         /// </summary>
         /// <param name="tpName">新闻类别名称</param>
         /// <returns></returns>

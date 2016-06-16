@@ -78,10 +78,10 @@
         <div class="conBotR">
         	<h2><a href="#"><img src="images/tit_bg7.jpg" width="126" height="38" alt="联系我们" /></a></h2>
             <p>
-            	地  址：<a href="http://j.map.baidu.com/lTSkB"  target="_blank">北京市延庆县张山营镇西卓家营村东500米豪联夏都葡萄庄园<br />    </a> 
-                邮  编：100000<br />  
-                热线电话：010-88888888<br />                                
-                传  真：010-88886666<br />  
+            	地  址：<a href="http://j.map.baidu.com/lTSkB"  target="_blank"><asp:Label ID="Label1" runat="server" Text="Label"></asp:Label> <br />   </a> 
+                邮 编：<br />  
+                热线电话：<br />                                
+                传 真：<br />  
                 邮  箱：
                 
             </p>
@@ -94,7 +94,7 @@
     	电话：010-69111309/69112018/69112016　联系人：龙经理 13801276881<br />
 	  北京市豪联夏都农业科技发展有限公司 版权所有 京ICP备10043433号
     <img src="images/logo1.jpg" width="108" height="47" />　  
-        <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+        
     </div>
 </div>
     </form>

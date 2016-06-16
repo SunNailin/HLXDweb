@@ -30,9 +30,8 @@ namespace Model
             set { newsTypeName = value; }
         }
 
-        public NewsType(string id, string newsTypeName)
+        public NewsType(string newsTypeName)
         {
-            this.id = id;
             this.newsTypeName = newsTypeName;
         }
 
