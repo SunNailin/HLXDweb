@@ -13,19 +13,12 @@ namespace DAL
         private SqlConnection conn = null;
         private SqlCommand cmd = null;
         private SqlDataReader sdr = null;
-
-        /// <summary>
-        /// SQLHelper类的构造函数
-        /// </summary>
         public SQLHelper()
         {
             string connStr = ConfigurationManager.ConnectionStrings["connStr"].ConnectionString;
             conn = new SqlConnection(connStr);
         }
-        /// <summary>
-        /// 数据库链接
-        /// </summary>
-        /// <returns></returns>
+
         private SqlConnection GetConn()
         {
             if (conn.State == ConnectionState.Closed)
@@ -36,21 +29,22 @@ namespace DAL
         }
 
         /// <summary>
-        /// 该方法执行传入的增删改SQL语句
+        ///  执行不带参数的增删改SQL语句或存储过程
         /// </summary>
-        /// <param name="sql">要执行的增删改SQL语句</param>
-        /// <returns>返回更新的记录数</returns>
-        public int ExecuteNonQuery(string sql)
+        /// <param name="cmdText">增删改SQL语句或存储过程</param>
+        /// <param name="ct">命令类型</param>
+        /// <returns></returns>
+        public int ExecuteNonQuery(string cmdText, CommandType ct)
         {
             int res;
             try
             {
-                cmd = new SqlCommand(sql, GetConn());
+                cmd = new SqlCommand(cmdText, GetConn());
+                cmd.CommandType = ct;
                 res = cmd.ExecuteNonQuery();
             }
             catch (Exception ex)
             {
-
                 throw ex;
             }
             finally
@@ -62,19 +56,19 @@ namespace DAL
             }
             return res;
         }
+
         /// <summary>
-        ///  执行带参数的SQL增删改语句
+        ///  执行带参数的增删改SQL语句或存储过程
         /// </summary>
-        /// <param name="sql">SQL增删改语句</param>
-        /// <param name="paras">参数集合</param>
+        /// <param name="cmdText">增删改SQL语句或存储过程</param>
+        /// <param name="ct">命令类型</param>
         /// <returns></returns>
-        public int ExecuteNonQuery(string sql, SqlParameter[] paras)
+        public int ExecuteNonQuery(string cmdText, SqlParameter[] paras, CommandType ct)
         {
             int res;
-            using (cmd = new SqlCommand(sql, GetConn()))
+            using (cmd = new SqlCommand(cmdText, GetConn()))
             {
-                //利用传参一定程度上避免SQL注入
-               // cmd.Parameters.Add(new SqlParameter("@tpName","豪联夏都"));
+                cmd.CommandType = ct;
                 cmd.Parameters.AddRange(paras);
                 res = cmd.ExecuteNonQuery();
             }
@@ -82,14 +76,36 @@ namespace DAL
         }
 
         /// <summary>
-        /// 该方法执行传入的查询SQL语句
+        ///  执行查询SQL语句或存储过程
         /// </summary>
-        /// <param name="sql">sql查询语句</param>
-        /// <returns>返回查询结果</returns>
-        public DataTable ExecuteQuery(string sql)
+        /// <param name="cmdText">查询SQL语句或存储过程</param>
+        /// <param name="ct">命令类型</param>
+        /// <returns></returns>
+        public DataTable ExecuteQuery(string cmdText, CommandType ct)
         {
             DataTable dt = new DataTable();
-            cmd = new SqlCommand(sql, GetConn());
+            cmd = new SqlCommand(cmdText, GetConn());
+            cmd.CommandType = ct;
+            using (sdr = cmd.ExecuteReader(CommandBehavior.CloseConnection))
+            {
+                dt.Load(sdr);
+            }
+            return dt;
+        }
+
+        /// <summary>
+        ///  执行带参数的查询SQL语句或存储过程
+        /// </summary>
+        /// <param name="cmdText">查询SQL语句或存储过程</param>
+        /// <param name="paras">参数集合</param>
+        /// <param name="ct">命令类型</param>
+        /// <returns></returns>
+        public DataTable ExecuteQuery(string cmdText, SqlParameter[] paras, CommandType ct)
+        {
+            DataTable dt = new DataTable();
+            cmd = new SqlCommand(cmdText, GetConn());
+            cmd.CommandType = ct;
+            cmd.Parameters.AddRange(paras);
             using (sdr = cmd.ExecuteReader(CommandBehavior.CloseConnection))
             {
                 dt.Load(sdr);

@@ -15,8 +15,10 @@ namespace HLXDweb
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            GridView1.DataSource = new NewsTypeDAO().SelectAll();
+            GridView1.DataSource = new NewsDAO().SelectNewestNews();
             GridView1.DataBind();
+            new NewsTypeDAO().Insert("冬天");
+            
             //Response.Write(new SQLHelper().ExecuteNonQuery("SELECT webinfo_address FROM webinfo where webinfo_id = 1"));
         }
         public static DataTable Getdata(string sql)

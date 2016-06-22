@@ -37,7 +37,7 @@ namespace DAL
                   new SqlParameter("@flpic",friLink.FLPic),
                   new SqlParameter("@flclicks",friLink.FLClicks),
             };
-            int res = sqlhelper.ExecuteNonQuery(sql, paras);
+            int res = sqlhelper.ExecuteNonQuery(sql, paras, CommandType.Text);
             if (res > 0)
             {
                 flag = true;
@@ -61,7 +61,7 @@ namespace DAL
                   new SqlParameter("@flpic",friLink.FLPic),
                   new SqlParameter("@flclicks",friLink.FLClicks),
             };
-            int res = sqlhelper.ExecuteNonQuery(sql, paras);
+            int res = sqlhelper.ExecuteNonQuery(sql, paras, CommandType.Text);
             if (res > 0)
             {
                 flag = true;
@@ -81,7 +81,7 @@ namespace DAL
             SqlParameter[] paras = new SqlParameter[]{
                   new SqlParameter("@flTitle",flTitle)
             };
-            DataTable dt = sqlhelper.ExecuteQuery(sql);
+            DataTable dt = sqlhelper.ExecuteQuery(sql, CommandType.Text);
             if (dt.Rows.Count > 0)
             {
                 flag = true;
@@ -97,7 +97,7 @@ namespace DAL
         {
             DataTable dt = new DataTable();
             string sql = "select * from frilink";
-            dt = sqlhelper.ExecuteQuery(sql);
+            dt = sqlhelper.ExecuteQuery(sql,CommandType.Text);
             return dt;
         }
 
@@ -113,7 +113,7 @@ namespace DAL
             SqlParameter[] paras = new SqlParameter[]{
                   new SqlParameter("@id",id)
             };
-            int res = sqlhelper.ExecuteNonQuery(sql, paras);
+            int res = sqlhelper.ExecuteNonQuery(sql, paras, CommandType.Text);
             if (res > 0)
             {
                 flag = true;

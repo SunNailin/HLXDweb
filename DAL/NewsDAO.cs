@@ -13,7 +13,7 @@ using Model;
 
 namespace DAL
 {
-    class NewsDAO
+    public class NewsDAO
     {
         private SQLHelper sqlhelper;
         public NewsDAO()
@@ -21,23 +21,87 @@ namespace DAL
             sqlhelper = new SQLHelper();
         }
 
-        // 取出最新的10条新闻（所属分类，新闻标题，发布时间，发布者）
-
-        //取出最热的10条新闻（先不做）
-
+        /// <summary>
+        /// 取出最新的10条新闻（所属分类，新闻标题，发布时间，发布者）
+        /// </summary>
+        /// <returns></returns>
+        public DataTable SelectNewestNews()
+        {
+            return sqlhelper.ExecuteQuery("procNewsSelectNewestNews",CommandType.StoredProcedure);
+        }
         //根据类别ID取出该类别下的新闻
+        public DataTable SelectNewsByTypeID(string typeID)
+        {
+            //TODO:根据类别ID取出该类别下的新闻
+            DataTable dt = new DataTable();
+            return dt;
 
-        //根据新闻ID取出该条新闻的主题内容
+        }
 
-        //根据标题搜索新闻（先不做）
-
-        //根据内容搜索新闻（先不做）
-
+        //根据新闻ID取出该条新闻的主题内容        
+        public News SelectByID(string id)
+        {
+            //TODO:根据新闻ID取出该条新闻的主题内容
+            News n = new News();
+            return n;
+        }
+        
         //增加新闻
+        public bool InsertNews(News n)
+        {
+            //TODO:增加新闻
+            bool flag = false;
+            return flag;
+        }
 
         //修改新闻
+        public bool UpdateNews(News n)
+        {
+            //TODO:修改新闻
+            bool flag = false;
+            return flag;
+        }
 
-        //删除新闻
+        /// <summary>
+        /// 删除新闻
+        /// </summary>
+        /// <param name="id">新闻的ID</param>
+        /// <returns></returns>
+        public bool Delete(string id)
+        {
+            bool flag = false;
+            string sql = "delete from news where news_id= @id";
+            SqlParameter[] paras = new SqlParameter[]{
+                  new SqlParameter("@id",id)
+            };
+            int res = sqlhelper.ExecuteNonQuery(sql, paras,CommandType.Text);
+            if (res > 0)
+            {
+                flag = true;
+            }
+            return flag;
+        }
 
+        //根据标题搜索新闻
+        public DataTable SelectByTitle(string title)
+        {
+            //TODO:根据标题搜索新闻
+            DataTable dt = new DataTable();
+            return dt;
+        }
+        //根据内容搜索新闻
+        public DataTable SelectByContent(string content)
+        {
+            //TODO:根据内容搜索新闻
+            DataTable dt = new DataTable();
+            return dt;
+        }
+        //取出最热的10条新闻
+        public DataTable SelectHotestNews()
+        {
+            //TODO:取出最热的10条新闻
+            DataTable dt = new DataTable();
+            return dt;
+        }
     }
 }

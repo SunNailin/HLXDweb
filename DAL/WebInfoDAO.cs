@@ -42,7 +42,7 @@ namespace DAL
                   new SqlParameter("@email",webInfo.Email),
                   new SqlParameter("@cotactor",webInfo.Contactor)
             };
-             int res = sqlhelper.ExecuteNonQuery(sql, paras);
+             int res = sqlhelper.ExecuteNonQuery(sql, paras, CommandType.Text);
              if (res > 0)
              {
                  flag = true;

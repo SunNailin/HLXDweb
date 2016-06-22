@@ -36,7 +36,7 @@ namespace DAL
             SqlParameter[] paras = new SqlParameter[]{
                   new SqlParameter("@tpName",tpName)
             };
-            int res = sqlhelper.ExecuteNonQuery(sql, paras);
+            int res = sqlhelper.ExecuteNonQuery(sql, paras,CommandType.Text);
             if (res > 0)
             {
                 flag = true;
@@ -57,7 +57,7 @@ namespace DAL
                   new SqlParameter("@tpName",tp.NewsTypeName),
                   new SqlParameter("@id",tp.Id)
             };
-            int res = sqlhelper.ExecuteNonQuery(sql, paras);
+            int res = sqlhelper.ExecuteNonQuery(sql, paras, CommandType.Text);
             if (res > 0)
             {
                 flag = true;
@@ -74,7 +74,7 @@ namespace DAL
         {
             bool flag = false;
             string sql = "select * from news_type where [news_type_name]='" + tpName + "'";
-            DataTable dt = sqlhelper.ExecuteQuery(sql);
+            DataTable dt = sqlhelper.ExecuteQuery(sql,CommandType.Text);
             if (dt.Rows.Count > 0)
             {
                 flag = true;
@@ -90,7 +90,7 @@ namespace DAL
         {
             DataTable dt = new DataTable();
             string sql = "select * from news_type";
-            dt = sqlhelper.ExecuteQuery(sql);
+            dt = sqlhelper.ExecuteQuery(sql, CommandType.Text);
             return dt;
         }
 
@@ -106,7 +106,7 @@ namespace DAL
             SqlParameter[] paras = new SqlParameter[]{
                   new SqlParameter("@id",id)
             };
-            int res = sqlhelper.ExecuteNonQuery(sql, paras);
+            int res = sqlhelper.ExecuteNonQuery(sql, paras, CommandType.Text);
             if (res > 0)
             {
                 flag = true;
