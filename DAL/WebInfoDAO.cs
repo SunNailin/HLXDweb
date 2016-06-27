@@ -10,22 +10,23 @@ namespace DAL
 {
     public class WebInfoDAO
     {
-         private SQLHelper sqlhelper = null;
-         public WebInfoDAO()
+        private SQLHelper sqlhelper = null;
+        public WebInfoDAO()
         {
             sqlhelper = new SQLHelper();
         }
 
+        #region 更新网页信息
         /// <summary>
         /// 更新webInfo信息
         /// </summary>
         /// <param name="webInfo"></param>
         /// <returns></returns>
-         public bool Update(WebInfo webInfo)
-         {
-             bool flag = false;
-             string sql = "update webinfo set webinfo_clicks=@clicks where webinfo_id=@id";
-             SqlParameter[] paras = new SqlParameter[]{
+        public bool Update(WebInfo webInfo)
+        {
+            bool flag = false;
+            string sql = "update webinfo set webinfo_clicks=@clicks where webinfo_id=@id";
+            SqlParameter[] paras = new SqlParameter[]{
                   new SqlParameter("@id",webInfo.Id),
                   new SqlParameter("@keywords",webInfo.Keywords),
                   new SqlParameter("@clicks",webInfo.Clicks),
@@ -42,12 +43,13 @@ namespace DAL
                   new SqlParameter("@email",webInfo.Email),
                   new SqlParameter("@cotactor",webInfo.Contactor)
             };
-             int res = sqlhelper.ExecuteNonQuery(sql, paras, CommandType.Text);
-             if (res > 0)
-             {
-                 flag = true;
-             }
-             return flag;
-         }
+            int res = sqlhelper.ExecuteNonQuery(sql, paras, CommandType.Text);
+            if (res > 0)
+            {
+                flag = true;
+            }
+            return flag;
+        }
+        #endregion
     }
 }

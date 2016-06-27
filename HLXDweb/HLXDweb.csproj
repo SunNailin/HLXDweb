@@ -165,6 +165,10 @@
     <Content Include="HeadPage.Master" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{81EB740A-0ABD-44C8-99F0-18A7EC1D2F0A}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DAL\DAL.csproj">
       <Project>{EFC7C4DD-08D0-453B-AF1D-4C9BBEEF2C3E}</Project>
       <Name>DAL</Name>

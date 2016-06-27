@@ -20,7 +20,8 @@ namespace DAL
         {
             sqlhelper = new SQLHelper();
         }
-
+        
+       #region 增加友情链接
         /// <summary>
         /// 增加友情链接
         /// </summary>
@@ -44,8 +45,10 @@ namespace DAL
             }
             return flag;
         }
-        
-       /// <summary>
+        #endregion
+
+        #region 修改友情链接
+        /// <summary>
        /// 修改友情链接
        /// </summary>
        /// <param name="friLink">友情链接对象</param>
@@ -68,9 +71,11 @@ namespace DAL
             }
             return flag;
         }
+        #endregion
 
+        #region 判断友情链接名称是否已经存在
         /// <summary>
-        /// 判断类别名称是否已经存在
+        /// 判断友情链接名称是否已经存在
         /// </summary>
         /// <param name="flTitle">友情链接名称</param>
         /// <returns></returns>
@@ -88,7 +93,9 @@ namespace DAL
             }
             return flag;
         }
+        #endregion
 
+        #region 取出所有友情链接
         /// <summary>
         /// 取出所有友情链接
         /// </summary>
@@ -100,7 +107,9 @@ namespace DAL
             dt = sqlhelper.ExecuteQuery(sql,CommandType.Text);
             return dt;
         }
+        #endregion
 
+        #region 删除友情链接
         /// <summary>
         /// 删除友情链接
         /// </summary>
@@ -120,5 +129,6 @@ namespace DAL
             }
             return flag;
         }
+        #endregion
     }
 }

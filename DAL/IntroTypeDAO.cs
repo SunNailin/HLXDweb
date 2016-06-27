@@ -24,6 +24,7 @@ namespace DAL
             sqlhelper = new SQLHelper();
         }
 
+        #region 增加简介类别
         /// <summary>
         /// 增加类别
         /// </summary>
@@ -36,13 +37,16 @@ namespace DAL
             SqlParameter[] paras = new SqlParameter[]{
                   new SqlParameter("@tpName",tpName)
             };
-            int res = sqlhelper.ExecuteNonQuery(sql, paras,CommandType.Text);
+            int res = sqlhelper.ExecuteNonQuery(sql, paras, CommandType.Text);
             if (res > 0)
             {
                 flag = true;
             }
             return flag;
         }
+        #endregion
+
+        #region 修改简介类别
         /// <summary>
         /// 修改类别
         /// </summary>
@@ -64,7 +68,9 @@ namespace DAL
             }
             return flag;
         }
+        #endregion
 
+        #region 判断类别名称是否存在
         /// <summary>
         /// 判断类别名称是否已经存在
         /// </summary>
@@ -74,24 +80,27 @@ namespace DAL
         {
             bool flag = false;
             string sql = "select * from intro_type where [intro_type_name]='" + tpName + "'";
-            DataTable dt = sqlhelper.ExecuteQuery(sql,CommandType.Text);
+            DataTable dt = sqlhelper.ExecuteQuery(sql, CommandType.Text);
             if (dt.Rows.Count > 0)
             {
                 flag = true;
             }
             return flag;
         }
+        #endregion
 
+        #region 取出所有简介类别
         /// <summary>
-        /// 取出所有新闻类别
+        /// 取出所有简介类别
         /// </summary>
         /// <returns>返回查询到的数据</returns>
         public DataTable SelectAll()
         {
             DataTable dt = new DataTable();
-            string sql = "select * from news_type";
+            string sql = "select * from intro_type";
             dt = sqlhelper.ExecuteQuery(sql, CommandType.Text);
             return dt;
         }
+        #endregion
     }
 }

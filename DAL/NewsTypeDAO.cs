@@ -24,8 +24,9 @@ namespace DAL
             sqlhelper = new SQLHelper();
         }
 
+        #region 增加新闻类别
         /// <summary>
-        /// 修改网页信息
+        ///增加新闻类别
         /// </summary>
         /// <param name="tpName">新闻类别名称</param>
         /// <returns></returns>
@@ -43,6 +44,9 @@ namespace DAL
             }
             return flag;
         }
+        #endregion
+
+        #region 修改类别
         /// <summary>
         /// 修改类别
         /// </summary>
@@ -64,7 +68,9 @@ namespace DAL
             }
             return flag;
         }
+        #endregion
 
+        #region 判断类别名称是否已经存在
         /// <summary>
         /// 判断类别名称是否已经存在
         /// </summary>
@@ -81,7 +87,9 @@ namespace DAL
             }
             return flag;
         }
+        #endregion
 
+        #region 取出所有新闻类别
         /// <summary>
         /// 取出所有新闻类别
         /// </summary>
@@ -93,7 +101,9 @@ namespace DAL
             dt = sqlhelper.ExecuteQuery(sql, CommandType.Text);
             return dt;
         }
+        #endregion
 
+        #region 删除新闻类别（连同其下的新闻一同删除）
         /// <summary>
         /// 删除新闻类别（连同其下的新闻一同删除）
         /// </summary>
@@ -113,6 +123,7 @@ namespace DAL
             }
             return flag;
         }
+        #endregion
 
     }
 }

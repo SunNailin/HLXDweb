@@ -6,7 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.SqlClient;
-using DAL;
+using BLL;
 using Model;
 
 namespace HLXDweb
@@ -15,9 +15,9 @@ namespace HLXDweb
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            GridView1.DataSource = new NewsDAO().SelectNewestNews();
+            GridView1.DataSource = new NewsTypeManager().SelectAll();
             GridView1.DataBind();
-            new NewsTypeDAO().Insert("冬天");
+            //new NewsManager().Insert("冬天");
             
             //Response.Write(new SQLHelper().ExecuteNonQuery("SELECT webinfo_address FROM webinfo where webinfo_id = 1"));
         }
@@ -43,10 +43,10 @@ namespace HLXDweb
             NewsType newsTp = new NewsType (tpName);
             //链接数据库
             Getdata(sql);
-            bool b = new NewsTypeDAO().Delete(id);
+            bool b = new NewsTypeManager().Delete(id);
             Response.Write(b);
             //new SQLHelper().ExecuteNonQuery();
-            GridView1.DataSource = new NewsTypeDAO().SelectAll();
+            GridView1.DataSource = new NewsTypeManager().SelectAll();
             GridView1.DataBind();
         }
     }

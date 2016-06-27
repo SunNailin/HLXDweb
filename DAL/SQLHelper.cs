@@ -19,6 +19,11 @@ namespace DAL
             conn = new SqlConnection(connStr);
         }
 
+        #region 打开数据库链接
+        /// <summary>
+        /// 打开数据库链接
+        /// </summary>
+        /// <returns></returns>
         private SqlConnection GetConn()
         {
             if (conn.State == ConnectionState.Closed)
@@ -27,7 +32,9 @@ namespace DAL
             }
             return conn;
         }
+        #endregion
 
+        #region 执行不带参数的增删改SQL语句或存储过程
         /// <summary>
         ///  执行不带参数的增删改SQL语句或存储过程
         /// </summary>
@@ -56,7 +63,9 @@ namespace DAL
             }
             return res;
         }
+        #endregion
 
+        #region 执行带参数的增删改SQL语句或存储过程
         /// <summary>
         ///  执行带参数的增删改SQL语句或存储过程
         /// </summary>
@@ -74,7 +83,9 @@ namespace DAL
             }
             return res;
         }
+        #endregion
 
+        #region 执行查询SQL语句或存储过程
         /// <summary>
         ///  执行查询SQL语句或存储过程
         /// </summary>
@@ -92,7 +103,9 @@ namespace DAL
             }
             return dt;
         }
+        #endregion
 
+        #region 执行带参数的查询SQL语句或存储过程
         /// <summary>
         ///  执行带参数的查询SQL语句或存储过程
         /// </summary>
@@ -112,5 +125,6 @@ namespace DAL
             }
             return dt;
         }
+        #endregion
     }
 }
