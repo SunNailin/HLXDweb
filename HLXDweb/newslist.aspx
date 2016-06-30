@@ -20,7 +20,7 @@
         <ul class="navCenter">
             <li><a href="index.aspx">首页</a></li>
             <li><a href="intro.aspx">公司简介</a></li>
-            <li><a href="service.aspx">产品展示</a></li>
+            <li><a href="product.aspx">产品展示</a></li>
             <li><a href="newslist.aspx">新闻动态</a></li>
             <li><a href="noticelist.aspx">活动公告</a></li>
             <li><a href="museum.aspx">葡萄酒博物馆</a></li>
@@ -47,11 +47,13 @@
             <h2 class="contact">
                 联系我们</h2>
             <div class="box">
-                地 址：<br />
-                邮 编：100000<br />
-                热线电话：010-88888888<br />
-                传 真：010-88886666<br />
-                邮 箱：</div>
+                地址：<a><asp:Label ID="Label6" runat="server" Text="Label"></asp:Label>
+                    <br />
+                </a>邮编：<asp:Label ID="Label7" runat="server" Text="Label"></asp:Label>
+                <br />
+                联系人：<asp:Label ID="Label4" runat="server" Text="Label"></asp:Label>
+                <br />
+            </div>
             <p class="bot">
             </p>
         </div>
@@ -61,40 +63,28 @@
                 新闻动态<span>您现在所在的位置：<a href="index.aspx">首页</a> > 新闻动态</span></h3>
             <div class="box">
                 <form runat="server">
+                <!--新闻列表GridView-->
                 <asp:GridView ID="gvAllNews" runat="server" AutoGenerateColumns="False" BorderColor="White">
                     <Columns>
-                        <asp:TemplateField HeaderText="新闻类别" >
-                            <EditItemTemplate>
-                                <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("news_type_name") %>'></asp:TextBox>
-                            </EditItemTemplate>
+                        <asp:TemplateField HeaderText="新闻类别">
                             <ItemTemplate>
                                 <asp:Label ID="Label1" runat="server" Text='<%# Bind("news_type_name") %>'></asp:Label>
                             </ItemTemplate>
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="新闻标题">
-                            <EditItemTemplate>
-                                <asp:TextBox ID="TextBox2" runat="server" Text='<%# Bind("news_title") %>'></asp:TextBox>
-                            </EditItemTemplate>
                             <ItemTemplate>
-                                <asp:Label ID="Label2" runat="server" Text='<%# Bind("news_title") %>'></asp:Label>
+                                <a href='news.aspx?news_id=<%# Eval("news_id") %>' target="_parent"  title='<%# Eval("news_title") %>'><%#StringTruncate(Eval("news_title").ToString(), 10, "...")%></a>
                             </ItemTemplate>
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="发布时间">
-                            <EditItemTemplate>
-                                <asp:TextBox ID="TextBox3" runat="server" Text='<%# Bind("news_time") %>'></asp:TextBox>
-                            </EditItemTemplate>
                             <ItemTemplate>
-                                <asp:Label ID="Label3" runat="server" Text='<%# Bind("news_time") %>'></asp:Label>
+                                <asp:Label ID="Label3" runat="server" Text='<%# StringTruncate( Eval("news_time").ToString(),10,"" )%>'></asp:Label>
                             </ItemTemplate>
                         </asp:TemplateField>
                     </Columns>
                 </asp:GridView>
+                <!--新闻列表GridView结束-->
                 </form>
-                <!--  <dl>
-                    <dt><a href="news.aspx">测试新闻等待绑定数据</a></dt>
-                    <dd>
-                        2016-05-20</dd>
-                </dl> -->
                 <div class="pageList">
                     [1/1]页 本页[14]条 [ 首页 ] [ 上一页 ] [ <a href="#">下一页</a> ] [ 末页 ]
                 </div>
@@ -103,14 +93,17 @@
         <!-- InstanceEndEditable -->
     </div>
     <div id="botNav">
-        <a href="#">网站首页</a><span>|</span><a href="#">公司新闻</a><span>|</span><a href="#">行业动态</a><span>|</span><a
-            href="#">基地管理</a><span>|</span><a href="#">会员服务</a><span>|</span><a href="#">网上购物</a><span>|</span><a
-                href="#">产品展示</a><span>|</span><a href="#">关于我们</a></div>
+        <a href="index.aspx">网站首页</a><span>|</span><a href="newslist.aspx">公司新闻</a><span>|</span><a
+            href="noticelist.aspx">活动公告</a><span>|</span><a href="admin.aspx">基地管理</a><span>|</span><a
+                href="vip.aspx">会员服务</a><span>|</span><a href="caizhai.aspx">住宿采摘</a><span>|</span><a
+                    href="product.aspx">产品展示</a><span>|</span><a href="intro.aspx">公司简介</a></div>
     <div id="footer">
         <div class="foot">
-            电话：010-69111309/69112018/69112016 联系人：龙经理 13801276881<br />
+            电话：<asp:Label ID="Label8" runat="server" Text="Label"></asp:Label>
+            &nbsp;联系人：<asp:Label ID="Label9" runat="server" Text="Label"></asp:Label>
+            <br />
             北京市豪联夏都农业科技发展有限公司 版权所有 京ICP备10043433号
-            <img src="images/logo1.jpg" width="108" height="47" />
+            <img src="images/logo1.jpg" width="108" height="47" alt="绿色食品" />
         </div>
     </div>
 </body>

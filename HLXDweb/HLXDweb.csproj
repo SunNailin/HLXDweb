@@ -105,10 +105,8 @@
     <Content Include="images\tit_bg9.jpg" />
     <Content Include="Index.aspx" />
     <Content Include="intro.aspx" />
-    <Content Include="list.html" />
     <Content Include="museum.aspx" />
     <Content Include="news.aspx" />
-    <Content Include="news.html" />
     <Content Include="newslist.aspx" />
     <Content Include="noticelist.aspx" />
     <Content Include="product.aspx" />

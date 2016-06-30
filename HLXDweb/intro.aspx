@@ -10,6 +10,7 @@
     <!-- InstanceEndEditable -->
 </head>
 <body>
+    <form id="form1" runat="server">
     <div id="header">
         <a href="#">
             <img src="images/logo5.png" width="480" height="71" alt="豪联夏都" /></a></div>
@@ -45,11 +46,12 @@
             <h2 class="contact">
                 联系我们</h2>
             <div class="box">
-                地 址：豪联夏都农业生态园<br />
-                邮 编：100000<br />
-                热线电话：010-88888888<br />
-                传 真：010-88886666<br />
-                邮 箱：
+                    地址：<a ><asp:Label ID="Label6"
+                        runat="server" Text="Label"></asp:Label>
+                        <br />
+                    </a>邮编：<asp:Label ID="Label7" runat="server" Text="Label"></asp:Label>
+                <br />                    
+                    联系人：<asp:Label ID="Label4" runat="server" Text="Label"></asp:Label>
             </div>
             <p class="bot">
             </p>
@@ -61,26 +63,30 @@
             <div class="box">
                 <h4>
                     园区概况</h4>
-                北京市豪联夏都农业科技发展有限责任公司
- 
-    公司在延庆张山营拥有300多亩有机葡萄生产基地，基地背靠国家自然保护区松山，南邻官厅水库，海拔600多米，优越的土壤、水质，凉爽的气候，众多的专家教授经考察论证张山营在北纬40.2度，东经115.9度，在地球的此赤道是最适合葡萄的种植和生长，基地生产的“京香玉”、“京蜜”、“红提”通过国家有机认证，是北京最大的有机葡萄生产基地之一，
+                &nbsp;&nbsp;&nbsp; 公司在延庆张山营拥有300多亩有机葡萄生产基地，基地背靠国家自然保护区松山，南邻官厅水库，海拔600多米，优越的土壤、水质，凉爽的气候，众多的专家教授经考察论证张山营在北纬40.2度，东经115.9度，在地球的此赤道是最适合葡萄的种植和生长，基地生产的“京香玉”、“京蜜”、“红提”通过国家有机认证，是北京最大的有机葡萄生产基地之一，
     “京香玉”简介：该品种是中科院植物研究所李少华教授培养出的鲜食早熟品种，果粒成长椭圆形、单果重14克、平均穗重1200克，最大可达2600克，果皮金黄色，果肉脆，籽少，味甜，具有北京传统品种玫瑰香的味道，但无论单果重还是肉质均优于玫瑰香，目前只有我公司大量种植，
-    红提品种简介：晚熟品种，植株生长旺盛，极丰产。极耐贮运。果粒大，圆形，最大粒重22克，平均粒重13～14克。果穗特大，果粒着生中等式紧密，圆锥形，最大穗重达2500克，平均穗重800～1200克。果肉脆硬，能切成薄片。味甜，含可溶性固形物17%～19%。品质极上。
-    目前正是红提的采摘季节，在国庆和中秋节前后大量成熟供应北京市民，张山营有机葡萄基地欢迎您前来观光采摘并提供团体采购预定，送货上门等服务，自驾车线路，京藏高速康庄出口、（康张路），张山营方向官厅大桥北即到，咨询电话69112016，69195316</div>
+    红提品种简介：晚熟品种，植株生长旺盛，极丰产。极耐贮运。果粒大，圆形，最大粒重22克，平均粒重13～14克。果穗特大，果粒着&nbsp; 生中等式紧密，圆锥形，最大穗重达2500克，平均穗重800～1200克。果肉脆硬，能切成薄片。味甜，含可溶性固形物17%～19%。品质极上。
+    目前正是红提的采摘季节，在国庆和中秋节前后大量成熟供应北京市民，张山营有机葡萄基地欢迎您前来观光采摘并提供团体采购预定，送货上门等服务，自驾车线路，京藏高速康庄出口、（康张路），张山营方向官厅大桥北即到，咨询电话69112016，69195316<br />
+                <asp:Label ID="Label8" runat="server" Text="Label"></asp:Label>
+            </div>
         </div>
         <!-- InstanceEndEditable -->
     </div>
     <div id="botNav">
-        <a href="#">网站首页</a><span>|</span><a href="#">公司新闻</a><span>|</span><a href="#">行业动态</a><span>|</span><a
-            href="#">基地管理</a><span>|</span><a href="#">会员服务</a><span>|</span><a href="#">网上购物</a><span>|</span><a
-                href="#">产品展示</a><span>|</span><a href="#">关于我们</a></div>
+        <a href="index.aspx">网站首页</a><span>|</span><a href="newslist.aspx">公司新闻</a><span>|</span><a href="noticelist.aspx">活动公告</a><span>|</span><a
+            href="admin.aspx">基地管理</a><span>|</span><a href="vip.aspx">会员服务</a><span>|</span><a href="caizhai.aspx">住宿采摘</a><span>|</span><a
+                href="product.aspx">产品展示</a><span>|</span><a href="intro.aspx">公司简介</a></div>
     <div id="footer">
         <div class="foot">
-            电话：010-69111309/69112018/69112016 联系人：龙经理 13801276881<br />
+            电话：<asp:Label ID="Label9" runat="server" Text="Label"></asp:Label>
+&nbsp;联系人：龙经理 
+            <asp:Label ID="Label10" runat="server" Text="Label"></asp:Label>
+            <br />
             北京市豪联夏都农业科技发展有限公司 版权所有 京ICP备10043433号
             <img src="images/logo1.jpg" width="108" height="47" />
         </div>
     </div>
+    </form>
 </body>
 <!-- InstanceEnd -->
 </html>

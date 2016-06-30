@@ -4,18 +4,18 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using Model;
 using BLL;
-using DAL;
+using Model;
 
-namespace HLXDweb
+namespace HLXDweb.Control
 {
-    public partial class news : System.Web.UI.Page
+    public partial class NewsType : System.Web.UI.UserControl
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //第一次进入该页面时
-            //绑定新闻分类
+            if (!Page.IsPostBack)
+            {
+                //绑定新闻分类
             repNewsType.DataSource = new NewsTypeManager().SelectAll();
             repNewsType.DataBind();
             //绑定所有新闻
@@ -27,11 +27,11 @@ namespace HLXDweb
             webinfo = wim.SelectByID(id);
             Label6.Text = webinfo.Address;
             Label7.Text = webinfo.Postcode;
-            Label8.Text = webinfo.Phone;
             Label4.Text = webinfo.Contactor;
             // Label5.Text = webinfo.Email;
             //Label6.Text = webinfo.Phone;
-            Label9.Text = webinfo.Contactor;
+            }
+            
         }
     }
 }

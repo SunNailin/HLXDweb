@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Data;
 using System.Data.SqlClient;
+using Model;
 
 namespace DAL
 {
@@ -100,6 +101,33 @@ namespace DAL
             string sql = "select * from intro";
             dt = sqlhelper.ExecuteQuery(sql, CommandType.Text);
             return dt;
+        }
+        #endregion
+
+        #region 根据简介ID取出简介主体
+        /// <summary>
+        /// 根据简介ID取出简介主体
+        /// </summary>
+        /// <param name="id">简介ID</param>
+        /// <returns></returns>
+        public Intro SelectByID(string id)
+        {
+            DataTable dt = new DataTable();
+            Intro n = new Intro();
+            string cmdText = "procIntroSelectIntroByID";
+            SqlParameter[] paras = new SqlParameter[]{
+            new SqlParameter("@intro_id",id),
+            };
+            dt = sqlhelper.ExecuteQuery(cmdText, paras, CommandType.StoredProcedure);
+            n.Content = dt.Rows[0]["intro_content"].ToString();
+            n.Id = (int)dt.Rows[0]["intro_id"];
+            n.Picture1 = dt.Rows[0]["intro_picture1"].ToString();
+            n.Picture2 = dt.Rows[0]["intro_picture2"].ToString();
+            //n.Picture3 = dt.Rows[0]["news_title"].ToString();
+            n.Sortid = (int)dt.Rows[0]["intro_sortid"];
+            n.Time = dt.Rows[0]["intro_time"].ToString();
+            n.Title = dt.Rows[0]["intro_title"].ToString();
+            return n;
         }
         #endregion
     }

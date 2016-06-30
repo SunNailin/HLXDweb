@@ -12,6 +12,7 @@
     <!-- InstanceEndEditable -->
 </head>
 <body>
+    <form id="form1" runat="server">
     <div id="header">
         <a href="#">
            <img src="images/logo5.png" width="480" height="71" alt="豪联夏都" /></a></div>
@@ -35,20 +36,21 @@
         <div class="listWrapL">
             <h2>
                 新闻类别</h2>
-            <ul>
-                <li><a href="#">公司新闻</a></li>   
-                <li><a href="#">行业动态</a></li>               
-            </ul>
-            <p class="bot">
+                <asp:Repeater ID="repNewsType" runat="server">
+                    <ItemTemplate>
+                        <li><a href='newslist.aspx?news_type_id=<%# Eval("news_type_id") %>'>
+                            <%# Eval("news_type_name") %></a></li>
+                    </ItemTemplate>
+                </asp:Repeater>
             </p>
             <h2 class="contact">
                 联系我们</h2>
             <div class="box">
-                地 址：豪联夏都农业生态园<br />
-                邮 编：100000<br />
-                热线电话：010-88888888<br />
-                传 真：010-88886666<br />
-                邮 箱：
+                地址：<a><asp:Label ID="Label6" runat="server" Text="Label"></asp:Label>
+                    <br />
+                </a>邮编：<asp:Label ID="Label7" runat="server" Text="Label"></asp:Label>
+                <br />
+                联系人：<asp:Label ID="Label4" runat="server" Text="Label"></asp:Label>
             </div>
             <p class="bot">
             </p>
@@ -82,17 +84,21 @@
         </div>
         <!-- InstanceEndEditable -->
     </div>
-    <div id="botNav">
-        <a href="#">网站首页</a><span>|</span><a href="#">公司新闻</a><span>|</span><a href="#">行业动态</a><span>|</span><a
-            href="#">基地管理</a><span>|</span><a href="#">会员服务</a><span>|</span><a href="#">网上购物</a><span>|</span><a
-                href="#">产品展示</a><span>|</span><a href="#">关于我们</a></div>
+  <div id="botNav">
+        <a href="index.aspx">网站首页</a><span>|</span><a href="newslist.aspx">公司新闻</a><span>|</span><a
+            href="noticelist.aspx">活动公告</a><span>|</span><a href="admin.aspx">基地管理</a><span>|</span><a
+                href="vip.aspx">会员服务</a><span>|</span><a href="caizhai.aspx">住宿采摘</a><span>|</span><a
+                    href="product.aspx">产品展示</a><span>|</span><a href="intro.aspx">公司简介</a></div>
     <div id="footer">
         <div class="foot">
-            电话：010-88888888 传真：010-88886666 客服电话：400-0000-000<br />
-            豪联夏都农业生态园 版权所有 京ICP备11036362号
-            <img src="images/logo1.jpg" width="108" height="47" />
+            电话：<asp:Label ID="Label8" runat="server" Text="Label"></asp:Label>
+            &nbsp;联系人：<asp:Label ID="Label9" runat="server" Text="Label"></asp:Label>
+            <br />
+            北京市豪联夏都农业科技发展有限公司 版权所有 京ICP备10043433号
+            <img src="images/logo1.jpg" width="108" height="47" alt="绿色食品" />
         </div>
     </div>
+    </form>
 </body>
 <!-- InstanceEnd -->
 </html>

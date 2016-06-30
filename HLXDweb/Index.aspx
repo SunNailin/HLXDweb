@@ -104,28 +104,28 @@
                     <a href="#">
                         <img src="images/tit_bg1.jpg" alt="有机蔬菜" /></a></h2>
                 <p>
-                    主要通过自然降水、施用农家肥人工除草等传统的农...</p>
+                    等待数据绑定</p>
             </li>
             <li>
                 <h2>
                     <a href="#">
                         <img src="images/tit_bg2.jpg" alt="有机蔬菜" /></a></h2>
                 <p>
-                    含有丰富的碳水化合物、维生素和微量元素，尤其是...</p>
+                    等待数据绑定</p>
             </li>
             <li>
                 <h2>
                     <a href="#">
                         <img src="images/tit_bg3.jpg" alt="有机蔬菜" /></a></h2>
                 <p>
-                    含有丰富的碳水化合物、维生素和微量元素，尤其是...</p>
+                    等待数据绑定</p>
             </li>
             <li>
                 <h2>
                     <a href="#">
                         <img src="images/tit_bg4.jpg" alt="有机蔬菜" /></a></h2>
                 <p>
-                    在饲养过程中不添加任何化学合成的添加剂、抗生素...</p>
+                    等待数据绑定</p>
             </li>
         </ul>
     </div>

@@ -32,7 +32,10 @@
                 href="product.aspx">产品展示</a><span>|</span><a href="intro.aspx">公司简介</a></div>
     <div id="footer">
         <div class="foot">
-            电话：010-69111309/69112018/69112016 联系人：龙经理 13801276881<br />
+            电话：<asp:Label 
+                ID="Label1" runat="server" Text="Label"></asp:Label>
+&nbsp;联系人：<asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
+            <br />
             北京市豪联夏都农业科技发展有限公司 版权所有 京ICP备10043433号
             <img src="images/logo1.jpg" width="108" height="47" alt="绿色食品"/>
         </div>

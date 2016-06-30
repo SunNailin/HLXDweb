@@ -72,5 +72,17 @@ namespace BLL
         }
         #endregion
 
+        #region 根据简介ID取出简介主体
+        /// <summary>
+        /// 根据简介ID取出简介主体
+        /// </summary>
+        /// <param name="id">简介ID</param>
+        /// <returns></returns>
+        public Intro SelectByID(string id)
+        {
+            return idao.SelectByID(id);
+        }
+        #endregion
+
     }
 }
