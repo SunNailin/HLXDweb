@@ -23,6 +23,7 @@ namespace BLL
         {
             ndao = new NewsDAO();
         }
+
         #region 选择最新10条新闻
         /// <summary>
         /// 取出最新的10条新闻（所属分类，新闻标题，发布时间，发布者）
@@ -31,6 +32,17 @@ namespace BLL
         public DataTable SelectNewestNews()
         {
             return ndao.SelectNewestNews();
+        }
+        #endregion
+
+        #region 取出全部新闻
+        /// <summary>
+        /// 取出全部新闻（所属分类，新闻标题，发布时间，发布者）
+        /// </summary>
+        /// <returns></returns>
+        public DataTable SelectAllNews()
+        {
+            return ndao.SelectAllNews();
         }
         #endregion
 

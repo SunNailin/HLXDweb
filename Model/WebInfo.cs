@@ -115,6 +115,7 @@ namespace Model
             set { contactor = value; }
         }
 
+        public WebInfo() { }
         public WebInfo(string id, string keywords,
             double clicks, string pic1, string pic2, string pic3,
             string pic4, string pic5, string logo, string address,

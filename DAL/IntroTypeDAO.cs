@@ -33,7 +33,7 @@ namespace DAL
         public bool Insert(string tpName)
         {
             bool flag = false;
-            string sql = "insert into intro_type(intro_type_name) values(@tpName)";
+            string sql = "insert into intro_type(intro_title) values(@tpName)";
             SqlParameter[] paras = new SqlParameter[]{
                   new SqlParameter("@tpName",tpName)
             };
@@ -56,7 +56,7 @@ namespace DAL
         public bool Update(string id, string tpName)
         {
             bool flag = false;
-            string sql = "update intro_type set [intro_type_name]=@tpName where intro_type_id=@id";
+            string sql = "update intro set [intro_title]=@tpName where intro_id=@id";
             SqlParameter[] paras = new SqlParameter[]{
                   new SqlParameter("@tpName",tpName),
                   new SqlParameter("@id",id)
@@ -79,7 +79,7 @@ namespace DAL
         public bool IsExists(string tpName)
         {
             bool flag = false;
-            string sql = "select * from intro_type where [intro_type_name]='" + tpName + "'";
+            string sql = "select * from intro where [intro_title]='" + tpName + "'";
             DataTable dt = sqlhelper.ExecuteQuery(sql, CommandType.Text);
             if (dt.Rows.Count > 0)
             {
@@ -97,7 +97,7 @@ namespace DAL
         public DataTable SelectAll()
         {
             DataTable dt = new DataTable();
-            string sql = "select * from intro_type";
+            string sql = "select * from intro";
             dt = sqlhelper.ExecuteQuery(sql, CommandType.Text);
             return dt;
         }

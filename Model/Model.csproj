@@ -43,6 +43,7 @@
     <Compile Include="FriendLink.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Intro.cs" />
     <Compile Include="News.cs" />
     <Compile Include="NewsType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

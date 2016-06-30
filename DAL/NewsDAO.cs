@@ -162,6 +162,21 @@ namespace DAL
         }
         #endregion
 
+        #region 取出所有新闻
+        /// <summary>
+        /// 取出所有新闻类别
+        /// </summary>
+        /// <returns>返回查询到的数据</returns>
+        public DataTable SelectAllNews()
+        {
+            DataTable dt = new DataTable();
+            dt = sqlhelper.ExecuteQuery("procNewsSelectAllNews", CommandType.StoredProcedure);
+            return dt;
+        }
+        #endregion
+
+
+
         #region 根据标题查找新闻（暂未实现）
         /// <summary>
         /// 根据标题搜索新闻  视频15，25分钟处（暂无）
