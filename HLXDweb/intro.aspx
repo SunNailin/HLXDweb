@@ -3,7 +3,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>豪联夏都农业生态园</title>
+    <title>公司简介—豪联夏都农业生态园</title>
     <!-- InstanceEndEditable -->
     <link href="css/style.css" rel="stylesheet" type="text/css" />
     <!-- InstanceBeginEditable name="head" -->
@@ -63,11 +63,8 @@
             <div class="box">
                 <h4>
                     园区概况</h4>
-                &nbsp;&nbsp;&nbsp; 公司在延庆张山营拥有300多亩有机葡萄生产基地，基地背靠国家自然保护区松山，南邻官厅水库，海拔600多米，优越的土壤、水质，凉爽的气候，众多的专家教授经考察论证张山营在北纬40.2度，东经115.9度，在地球的此赤道是最适合葡萄的种植和生长，基地生产的“京香玉”、“京蜜”、“红提”通过国家有机认证，是北京最大的有机葡萄生产基地之一，
-    “京香玉”简介：该品种是中科院植物研究所李少华教授培养出的鲜食早熟品种，果粒成长椭圆形、单果重14克、平均穗重1200克，最大可达2600克，果皮金黄色，果肉脆，籽少，味甜，具有北京传统品种玫瑰香的味道，但无论单果重还是肉质均优于玫瑰香，目前只有我公司大量种植，
-    红提品种简介：晚熟品种，植株生长旺盛，极丰产。极耐贮运。果粒大，圆形，最大粒重22克，平均粒重13～14克。果穗特大，果粒着&nbsp; 生中等式紧密，圆锥形，最大穗重达2500克，平均穗重800～1200克。果肉脆硬，能切成薄片。味甜，含可溶性固形物17%～19%。品质极上。
-    目前正是红提的采摘季节，在国庆和中秋节前后大量成熟供应北京市民，张山营有机葡萄基地欢迎您前来观光采摘并提供团体采购预定，送货上门等服务，自驾车线路，京藏高速康庄出口、（康张路），张山营方向官厅大桥北即到，咨询电话69112016，69195316<br />
-                <asp:Label ID="Label8" runat="server" Text="Label"></asp:Label>
+                <br />
+                &nbsp;&nbsp;&nbsp; <asp:Label ID="Label8" runat="server" Text="Label"></asp:Label>
             </div>
         </div>
         <!-- InstanceEndEditable -->

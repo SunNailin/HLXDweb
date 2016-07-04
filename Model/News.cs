@@ -1,6 +1,6 @@
 /* 
  *  作者：牛腩
- *  创建时间：2016/6/16 星期四 17:13:38
+ *  创建时间：
  *  类说明：新闻实体类
  */
 namespace Model
@@ -181,12 +181,13 @@ namespace Model
         }
 
         public News() { }
-        public News(string title, string content, string typeid, string publisher)
+        public News(string title, string content, string typeid, string publisher,string time)
         {
             this.title = title;
             this.content = content;
             this.typeid = typeid;
             this.publisher = publisher;
+            this.time = time;
         }
 
     }

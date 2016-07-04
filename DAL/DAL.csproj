@@ -45,6 +45,8 @@
     <Compile Include="IntroTypeDAO.cs" />
     <Compile Include="NewsDAO.cs" />
     <Compile Include="NewsTypeDAO.cs" />
+    <Compile Include="NoticeDAO.cs" />
+    <Compile Include="NoticeTypeDAO.cs" />
     <Compile Include="OtherDAO.cs" />
     <Compile Include="SQLHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

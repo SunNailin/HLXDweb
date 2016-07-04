@@ -70,9 +70,9 @@ namespace DAL
             n.Id = id;
             n.Title = dt.Rows[0]["news_title"].ToString();
             n.Content = dt.Rows[0]["news_content"].ToString();
-            n.Publisher = dt.Rows[0]["news_publisher"].ToString();
+            //n.Publisher = dt.Rows[0]["news_publisher"].ToString();
             n.Time = dt.Rows[0]["news_time"].ToString();
-            n.Typeid = dt.Rows[0]["news_typerid"].ToString();
+            n.Typeid = dt.Rows[0]["news_typeid"].ToString();
             return n;
         }
         #endregion

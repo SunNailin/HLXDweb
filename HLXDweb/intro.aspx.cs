@@ -26,7 +26,7 @@ namespace HLXDweb
             repNewsType.DataBind();
             //联系我们边栏
             string webinfo_id = "1";
-            string content = OtherDAO.StringTruncate(intro.Content,100,"……");
+            string content = intro.Content;
             //index_address = sqlstr1;
             webinfo = wim.SelectByID(webinfo_id);
             Label6.Text = webinfo.Address;

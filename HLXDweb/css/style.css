@@ -9,7 +9,7 @@ body
     color: #606060;
     background: url(../images/body_bg.jpg) no-repeat center top;
 }
-h1, h2, h3, h4,h5, ul, li, dl, dt, dd, p, img
+h1, h2, h3, h4,h5, h6,ul, li, dl, dt, dd, p, img , cont
 {
     margin: 0;
     padding: 0;
@@ -89,7 +89,7 @@ a:hover
     background: url(../images/navRight.jpg) no-repeat;
 }
 /*banner*/
-#banner
+#KinSlideshow
 {
     width: 980px;
     height: 382px;
@@ -104,18 +104,19 @@ a:hover
     margin: 8px auto 0;
     background: url(../images/content_bg.jpg) no-repeat #fff;
     padding-top: 9px;
+    height: 472px;
 }
 .conTop
 {
-    width: 970px;
-    height: 92px;
+    width: 966px;
+    height: 87px;
     border-bottom: 1px solid #E0E0E0;
     padding-left: 10px;
 }
 .conTop li
 {
     width: 211px;
-    height: 73px;
+    height: 70px;
     background: url(../images/li_bg.jpg) no-repeat;
     float: left;
     margin-right: 7px;
@@ -173,6 +174,15 @@ a:hover
     border: 1px solid #d8d8d8;
     padding: 2px;
 }
+
+.conBotL cont
+{
+    width: 189px;
+    height: 135px;
+    float: right;
+    line-height: 20px;
+}
+
 .conBotL dd
 {
     width: 189px;
@@ -213,14 +223,14 @@ a:hover
 }
 .conBotC ul
 {
-    width: 388px;
+     width: 388px;
     height: 125px;
-    margin-top: 22px;
+    margin-top: 2px;
 }
 .conBotC li
 {
-    width: 120px;
-    height: 125px;
+    width: 383px;
+    height: 151px;
     float: left;
     margin-right: 13px;
 }
@@ -248,9 +258,10 @@ a:hover
 .conBotR
 {
     width: 230px;
-    height: 199px;
+    height: 77px;
     float: left;
     padding: 10px 10px 0;
+    margin-left: 0px;
 }
 .conBotR p
 {
@@ -328,6 +339,12 @@ a:hover
     text-indent: -999px;
 }
 
+.listWrapL h6
+{
+    height: 56px;
+    background: url(../images/tit_bg_gonggaoleibie.jpg) no-repeat;
+    text-indent: -999px;
+}
 
 .listWrapL ul
 {

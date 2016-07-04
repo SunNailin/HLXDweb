@@ -58,6 +58,8 @@
     <Content Include="admin.aspx" />
     <Content Include="caizhai.aspx" />
     <Content Include="contactus.aspx" />
+    <Content Include="Control\Footer.ascx" />
+    <Content Include="Control\NewsType.ascx" />
     <Content Include="css\style.css" />
     <Content Include="css\StyleSheet1.css" />
     <Content Include="HTMLPage1.htm" />
@@ -65,6 +67,10 @@
     <Content Include="images\20151104113618875.jpg" />
     <Content Include="images\arrow.gif" />
     <Content Include="images\banner.jpg" />
+    <Content Include="images\banner_bg.jpg" />
+    <Content Include="images\banner_bg1.jpg" />
+    <Content Include="images\banner_bg2.jpg" />
+    <Content Include="images\bg_title_gongsijieshao.jpg" />
     <Content Include="images\body_bg.jpg" />
     <Content Include="images\bot_bg.jpg" />
     <Content Include="images\bot_bg1.jpg" />
@@ -93,23 +99,48 @@
     <Content Include="images\photo_4.jpg" />
     <Content Include="images\QQ截图20160510160204.png" />
     <Content Include="images\QQ截图20160512221722.png" />
+    <Content Include="images\tit_bg.jpg" />
     <Content Include="images\tit_bg1.jpg" />
     <Content Include="images\tit_bg10.jpg" />
     <Content Include="images\tit_bg2.jpg" />
     <Content Include="images\tit_bg3.jpg" />
     <Content Include="images\tit_bg4.jpg" />
     <Content Include="images\tit_bg5.jpg" />
+    <Content Include="images\tit_bg5_caizhaizhusu.jpg" />
+    <Content Include="images\tit_bg5_huiyuanfuwu.jpg" />
+    <Content Include="images\tit_bg5_huodonggonggao.jpg" />
+    <Content Include="images\tit_bg5_museum.jpg" />
+    <Content Include="images\tit_bg5_xinwendongtai.jpg" />
     <Content Include="images\tit_bg6.jpg" />
     <Content Include="images\tit_bg7.jpg" />
     <Content Include="images\tit_bg8.jpg" />
     <Content Include="images\tit_bg9.jpg" />
+    <Content Include="images\tit_bg_caizhaizhusu.jpg" />
+    <Content Include="images\tit_bg_chanpinleibie.jpg" />
+    <Content Include="images\tit_bg_chanpinzhanshi.jpg" />
+    <Content Include="images\tit_bg_contactus.jpg" />
+    <Content Include="images\tit_bg_gonggaoleibie.jpg" />
+    <Content Include="images\tit_bg_gongsijieshao.jpg" />
+    <Content Include="images\tit_bg_guancangleibie.jpg" />
+    <Content Include="images\tit_bg_huiyuanfuwu.jpg" />
+    <Content Include="images\tit_bg_intro.jpg" />
+    <Content Include="images\tit_bg_jianjieleibie.jpg" />
+    <Content Include="images\tit_bg_lianxiwomen.jpg" />
+    <Content Include="images\tit_bg_newslist.jpg" />
+    <Content Include="images\tit_bg_newstype.jpg" />
+    <Content Include="images\tit_bg_notice.jpg" />
+    <Content Include="images\tit_bg_noticetype.jpg" />
+    <Content Include="images\tit_bg_producttype.jpg" />
+    <Content Include="images\tit_bg_winemuseum.jpg" />
     <Content Include="Index.aspx" />
     <Content Include="intro.aspx" />
     <Content Include="museum.aspx" />
     <Content Include="news.aspx" />
     <Content Include="newslist.aspx" />
+    <Content Include="notice.aspx" />
     <Content Include="noticelist.aspx" />
     <Content Include="product.aspx" />
+    <Content Include="Scripts\jquery.KinSlideshow-1.1.js" />
     <Content Include="Styles\Site.css" />
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
@@ -186,6 +217,20 @@
     <Compile Include="contactus.aspx.designer.cs">
       <DependentUpon>contactus.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Control\Footer.ascx.cs">
+      <DependentUpon>Footer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Control\Footer.ascx.designer.cs">
+      <DependentUpon>Footer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Control\NewsType.ascx.cs">
+      <DependentUpon>NewsType.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Control\NewsType.ascx.designer.cs">
+      <DependentUpon>NewsType.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -244,6 +289,13 @@
     </Compile>
     <Compile Include="newslist.aspx.designer.cs">
       <DependentUpon>newslist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="notice.aspx.cs">
+      <DependentUpon>notice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="notice.aspx.designer.cs">
+      <DependentUpon>notice.aspx</DependentUpon>
     </Compile>
     <Compile Include="noticelist.aspx.cs">
       <DependentUpon>noticelist.aspx</DependentUpon>

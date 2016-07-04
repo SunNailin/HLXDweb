@@ -1,5 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="newslist.aspx.cs" Inherits="HLXDweb.newslist" %>
 
+<%@ Register src="Control/NewsType.ascx" tagname="NewsType" tagprefix="uc1" %>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -31,7 +33,9 @@
         <span class="navRight"></span>
     </div>
     <div id="listWrap">
-        <div class="listWrapL">
+
+    <!--新闻分类以及联系方式-->
+       <%-- <div class="listWrapL">
             <h2>
                 新闻类别</h2>
             <ul>
@@ -56,7 +60,7 @@
             </div>
             <p class="bot">
             </p>
-        </div>
+        </div>--%>
         <!-- InstanceBeginEditable name="EditRegion3" -->
         <div class="listWrapR">
             <h3>
@@ -64,22 +68,26 @@
             <div class="box">
                 <form runat="server">
                 <!--新闻列表GridView-->
-                <asp:GridView ID="gvAllNews" runat="server" AutoGenerateColumns="False" BorderColor="White">
+                <asp:GridView ID="gvAllNews" runat="server" AutoGenerateColumns="False" 
+                    BorderColor="White" Width="697px">
                     <Columns>
                         <asp:TemplateField HeaderText="新闻类别">
                             <ItemTemplate>
                                 <asp:Label ID="Label1" runat="server" Text='<%# Bind("news_type_name") %>'></asp:Label>
                             </ItemTemplate>
+                            <ControlStyle Width="100px" />
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="新闻标题">
                             <ItemTemplate>
-                                <a href='news.aspx?news_id=<%# Eval("news_id") %>' target="_parent"  title='<%# Eval("news_title") %>'><%#StringTruncate(Eval("news_title").ToString(), 10, "...")%></a>
+                                <a href='news.aspx?news_id=<%# Eval("news_id") %>' target="_parent"  title='<%# Eval("news_title") %>'><%# StringTruncate(Eval("news_title").ToString(), 10, "...")%></a>
                             </ItemTemplate>
+                            <ControlStyle Width="400px" />
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="发布时间">
                             <ItemTemplate>
                                 <asp:Label ID="Label3" runat="server" Text='<%# StringTruncate( Eval("news_time").ToString(),10,"" )%>'></asp:Label>
                             </ItemTemplate>
+                            <ControlStyle Width="120px" />
                         </asp:TemplateField>
                     </Columns>
                 </asp:GridView>
@@ -91,6 +99,7 @@
             </div>
         </div>
         <!-- InstanceEndEditable -->
+        <uc1:NewsType ID="NewsType1" runat="server" />
     </div>
     <div id="botNav">
         <a href="index.aspx">网站首页</a><span>|</span><a href="newslist.aspx">公司新闻</a><span>|</span><a
