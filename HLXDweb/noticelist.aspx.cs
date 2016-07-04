@@ -56,8 +56,6 @@ namespace HLXDweb
                 Label6.Text = webinfo.Address;
                 Label7.Text = webinfo.Postcode;
                 Label4.Text = webinfo.Contactor;
-                Label8.Text = webinfo.Phone;
-               Label9.Text = webinfo.Contactor;
                 //第一次进入该页面时
                 //绑定所有公告
                 string notice_type_id = Request.QueryString["notice_type_id"];

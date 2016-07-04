@@ -9,7 +9,7 @@ body
     color: #606060;
     background: url(../images/body_bg.jpg) no-repeat center top;
 }
-h1, h2, h3, h4,h5, h6,ul, li, dl, dt, dd, p, img , cont
+h1, h2, h3, h4,h5, h6,h7,ul, li, dl, dt, dd, p, img , cont
 {
     margin: 0;
     padding: 0;
@@ -346,6 +346,13 @@ a:hover
     text-indent: -999px;
 }
 
+.listWrapL h7
+{
+    height: 56px;
+    background: url(../images/tit_bg_gonggaoleibie.jpg) no-repeat;
+    text-indent: -999px;
+}
+
 .listWrapL ul
 {
     width: 198px;
@@ -398,6 +405,7 @@ a:hover
 {
     width: 734px;
     float: right;
+    height: 448px;
 }
 h3
 {
@@ -418,6 +426,7 @@ h3 span
 .listWrapR .box
 {
     padding: 0 16px;
+    height: 400px;
 }
 .listWrapR dl
 {

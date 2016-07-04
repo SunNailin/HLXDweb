@@ -58,7 +58,8 @@
     <Content Include="admin.aspx" />
     <Content Include="caizhai.aspx" />
     <Content Include="contactus.aspx" />
-    <Content Include="Control\Footer.ascx" />
+    <Content Include="Control\footerANDbotnav.ascx" />
+    <Content Include="Control\headerANDnav.ascx" />
     <Content Include="Control\NewsType.ascx" />
     <Content Include="css\style.css" />
     <Content Include="css\StyleSheet1.css" />
@@ -139,7 +140,7 @@
     <Content Include="newslist.aspx" />
     <Content Include="notice.aspx" />
     <Content Include="noticelist.aspx" />
-    <Content Include="product.aspx" />
+    <Content Include="productlist.aspx" />
     <Content Include="Scripts\jquery.KinSlideshow-1.1.js" />
     <Content Include="Styles\Site.css" />
     <Content Include="Default.aspx" />
@@ -217,12 +218,19 @@
     <Compile Include="contactus.aspx.designer.cs">
       <DependentUpon>contactus.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Control\Footer.ascx.cs">
-      <DependentUpon>Footer.ascx</DependentUpon>
+    <Compile Include="Control\footerANDbotnav.ascx.cs">
+      <DependentUpon>footerANDbotnav.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Control\Footer.ascx.designer.cs">
-      <DependentUpon>Footer.ascx</DependentUpon>
+    <Compile Include="Control\footerANDbotnav.ascx.designer.cs">
+      <DependentUpon>footerANDbotnav.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Control\headerANDnav.ascx.cs">
+      <DependentUpon>headerANDnav.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Control\headerANDnav.ascx.designer.cs">
+      <DependentUpon>headerANDnav.ascx</DependentUpon>
     </Compile>
     <Compile Include="Control\NewsType.ascx.cs">
       <DependentUpon>NewsType.ascx</DependentUpon>
@@ -304,12 +312,12 @@
     <Compile Include="noticelist.aspx.designer.cs">
       <DependentUpon>noticelist.aspx</DependentUpon>
     </Compile>
-    <Compile Include="product.aspx.cs">
-      <DependentUpon>product.aspx</DependentUpon>
+    <Compile Include="productlist.aspx.cs">
+      <DependentUpon>productlist.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="product.aspx.designer.cs">
-      <DependentUpon>product.aspx</DependentUpon>
+    <Compile Include="productlist.aspx.designer.cs">
+      <DependentUpon>productlist.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">

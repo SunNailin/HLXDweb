@@ -67,7 +67,7 @@ namespace HLXDweb
             gvNewNews.Columns[1].ItemStyle.Width = 100;
             
         }
-
+        protected string introcont;
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -81,7 +81,7 @@ namespace HLXDweb
             IntroManager introm = new IntroManager();
             string intro_id = "3";
             intro = introm.SelectByID(intro_id);
-            string introcont = StringTruncate(intro.Content, 100, "...");
+            introcont = StringTruncate(intro.Content, 80, "…… &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp详细内容>>>");
             Label1.Text = webinfo.Address;
             Label2.Text = webinfo.Postcode;
             Label3.Text = webinfo.Phone;

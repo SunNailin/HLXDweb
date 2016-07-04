@@ -1,6 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Index.aspx.cs" Inherits="HLXDweb.Index1" %>
 
-<%@ Register Src="Control/Footer.ascx" TagName="Footer" TagPrefix="uc1" %>
+<%@ Register src="Control/footerANDbotnav.ascx" tagname="footerANDbotnav" tagprefix="uc1" %>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
@@ -124,7 +125,7 @@
                     <dt><a href="#">
                         <img src="images/photo_1.jpg" width="96" height="82" alt="豪联夏都" /></a></dt>
                     <dd>
-                        <a href="intro.aspx" title="<%=introcont%>"></a></dd>
+                        <a href="intro.aspx" title="">&nbsp&nbsp&nbsp&nbsp<%=introcont %></a></dd>
                 </dl>
             </div>
             <div class="conBotC">
@@ -198,15 +199,9 @@
                 <p>
                     等待数据绑定</p>
             </li>
-        </ul>
-        </marquee>
+        </ul></marquee>
     </div>
-    <div id="botNav">
-        <a href="index.aspx">网站首页</a><span>|</span><a href="newslist.aspx">公司新闻</a><span>|</span><a
-            href="noticelist.aspx">活动公告</a><span>|</span><a href="admin.aspx">基地管理</a><span>|</span><a
-                href="vip.aspx">会员服务</a><span>|</span><a href="caizhai.aspx">住宿采摘</a><span>|</span><a
-                    href="product.aspx">产品展示</a><span>|</span><a href="intro.aspx">公司简介</a></div>
-    <uc1:Footer ID="Footer1" runat="server" />
+    <uc1:footerANDbotnav ID="footerANDbotnav1" runat="server" />
     </form>
 </body>
 </html>

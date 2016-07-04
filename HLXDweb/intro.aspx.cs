@@ -33,9 +33,7 @@ namespace HLXDweb
             Label7.Text = webinfo.Postcode;
             Label8.Text = content;
             Label4.Text = webinfo.Contactor;
-            // Label5.Text = webinfo.Email;
-            Label9.Text = webinfo.Phone;
-            Label10.Text = webinfo.Contactor;
+            // Label5.Text = webinfo.Email;        
         }
     }
 }

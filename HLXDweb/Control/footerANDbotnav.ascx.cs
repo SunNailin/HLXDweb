@@ -18,8 +18,9 @@ namespace HLXDweb.Control
             WebInfo webinfo = new WebInfo();
             WebInfoManager wim = new WebInfoManager();
             webinfo = wim.SelectByID(id);
-            Label7.Text = webinfo.Contactor;
-            Label6.Text = webinfo.Phone;
+            Label8.Text = webinfo.Phone;
+            Label9.Text = webinfo.Contactor;
+
         }
     }
 }
