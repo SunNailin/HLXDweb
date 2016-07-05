@@ -149,6 +149,9 @@
     <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
     <Content Include="Scripts\jquery-1.4.1.js" />
     <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="uploadimages\product\200991414164764067_京蜜.jpg" />
+    <Content Include="uploadimages\product\201191614571795741_京香玉.jpg" />
+    <Content Include="uploadimages\product\201282317715458_京香玉.jpg" />
     <Content Include="uploadimages\product\2011916151994083_红提.jpg" />
     <Content Include="uploadimages\product\201282317128218_红提.jpg" />
     <Content Include="vip.aspx" />
