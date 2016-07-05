@@ -140,6 +140,7 @@
     <Content Include="newslist.aspx" />
     <Content Include="notice.aspx" />
     <Content Include="noticelist.aspx" />
+    <Content Include="product.aspx" />
     <Content Include="productlist.aspx" />
     <Content Include="Scripts\jquery.KinSlideshow-1.1.js" />
     <Content Include="Styles\Site.css" />
@@ -148,6 +149,8 @@
     <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
     <Content Include="Scripts\jquery-1.4.1.js" />
     <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="uploadimages\product\2011916151994083_红提.jpg" />
+    <Content Include="uploadimages\product\201282317128218_红提.jpg" />
     <Content Include="vip.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -160,6 +163,7 @@
       <DependentUpon>Web.config</DependentUpon>
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="张山营有机葡萄采摘园.html" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="About.aspx.cs">
@@ -311,6 +315,13 @@
     </Compile>
     <Compile Include="noticelist.aspx.designer.cs">
       <DependentUpon>noticelist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="product.aspx.cs">
+      <DependentUpon>product.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="product.aspx.designer.cs">
+      <DependentUpon>product.aspx</DependentUpon>
     </Compile>
     <Compile Include="productlist.aspx.cs">
       <DependentUpon>productlist.aspx</DependentUpon>

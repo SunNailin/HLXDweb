@@ -9,7 +9,7 @@ body
     color: #606060;
     background: url(../images/body_bg.jpg) no-repeat center top;
 }
-h1, h2, h3, h4,h5, h6,h7,ul, li, dl, dt, dd, p, img , cont
+h1, h2, h3, h4, h5, h6, h7, ul, li, dl, dt, dd, p, img, cont
 {
     margin: 0;
     padding: 0;
@@ -223,7 +223,7 @@ a:hover
 }
 .conBotC ul
 {
-     width: 388px;
+    width: 388px;
     height: 125px;
     margin-top: 2px;
 }
@@ -319,6 +319,7 @@ a:hover
     margin: 8px auto 0;
     background: url(../images/content_bg.jpg) no-repeat #fff;
     padding: 9px 10px 0;
+    height: 684px;
 }
 .listWrapL
 {
@@ -423,10 +424,21 @@ h3 span
     font-size: 12px;
     font-weight: normal;
 }
-.listWrapR .box
+.listWrapL .box
 {
-    padding: 0 16px;
-    height: 400px;
+    width: 174px;
+    height: 120px;
+    line-height: 20px;
+    border-left: 1px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0;
+    background-color: #f4f4f4;
+    margin: 0 auto;
+    padding: 0 12px;
+}
+
+
+.listWrapR .show .
+{
 }
 .listWrapR dl
 {

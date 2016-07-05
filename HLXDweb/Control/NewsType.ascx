@@ -1,4 +1,5 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="NewsType.ascx.cs" Inherits="HLXDweb.Control.NewsType" %>
+
 <div class="listWrapL">
             <h2>
                 新闻类别</h2>
