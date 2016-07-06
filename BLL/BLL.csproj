@@ -45,6 +45,7 @@
     <Compile Include="NewsTypeManager.cs" />
     <Compile Include="NoticeManager.cs" />
     <Compile Include="NoticeTypeManager.cs" />
+    <Compile Include="ProductTypeManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WebInfoManager.cs" />
   </ItemGroup>

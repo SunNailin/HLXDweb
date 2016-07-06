@@ -11,7 +11,7 @@
             <li><a href="newslist.aspx">新闻动态</a></li>
             <li><a href="noticelist.aspx">活动公告</a></li>
             <li><a href="museum.aspx">葡萄酒博物馆</a></li>
-            <li><a href="caizhai.aspx">采摘住宿</a></li>
+            <li><a href="caizhai.aspx">采摘乐园</a></li>
             <li><a href="vip.aspx">会员服务</a></li>
             <li><a href="contactus.aspx">联系我们</a></li>
         </ul>

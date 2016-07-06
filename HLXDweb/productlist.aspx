@@ -20,7 +20,7 @@
             <h3>
                 产品展示<span>您现在所在的位置：<a href="#">首页</a> > 产品展示</span></h3>
             <div class="box">
-                <table width="100%" border="2px" cellpadding="2" cellspacing="1">
+                <table width="100%" border="2px" cellpadding="2" cellspacing="1" bordercolor="Green">
                     <tbody>
                         <tr>
                             <td align="center" style="word-spacing">

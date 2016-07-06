@@ -48,6 +48,8 @@
     <Compile Include="NoticeDAO.cs" />
     <Compile Include="NoticeTypeDAO.cs" />
     <Compile Include="OtherDAO.cs" />
+    <Compile Include="ProductDAO.cs" />
+    <Compile Include="ProductTypeDAO.cs" />
     <Compile Include="SQLHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WebInfoDAO.cs" />

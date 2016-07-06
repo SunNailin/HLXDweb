@@ -343,16 +343,11 @@ a:hover
 .listWrapL h6
 {
     height: 56px;
-    background: url(../images/tit_bg_gonggaoleibie.jpg) no-repeat;
+    background: url(../images/tit_bg_leibie.jpg) no-repeat;
     text-indent: -999px;
 }
 
-.listWrapL h7
-{
-    height: 56px;
-    background: url(../images/tit_bg_gonggaoleibie.jpg) no-repeat;
-    text-indent: -999px;
-}
+
 
 .listWrapL ul
 {

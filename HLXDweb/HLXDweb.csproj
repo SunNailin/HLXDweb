@@ -57,7 +57,9 @@
     <Content Include="Account\Register.aspx" />
     <Content Include="admin.aspx" />
     <Content Include="caizhai.aspx" />
+    <Content Include="caizhaidetail.aspx" />
     <Content Include="contactus.aspx" />
+    <Content Include="Control\contactus.ascx" />
     <Content Include="Control\footerANDbotnav.ascx" />
     <Content Include="Control\headerANDnav.ascx" />
     <Content Include="Control\NewsType.ascx" />
@@ -149,6 +151,13 @@
     <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
     <Content Include="Scripts\jquery-1.4.1.js" />
     <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="uploadimages\caizhai\卧室.jpg" />
+    <Content Include="uploadimages\caizhai\卫浴.jpg" />
+    <Content Include="uploadimages\caizhai\客厅.jpg" />
+    <Content Include="uploadimages\caizhai\果园一隅jpg.jpg" />
+    <Content Include="uploadimages\caizhai\瓜廊夏之景.jpg" />
+    <Content Include="uploadimages\caizhai\瓜廊秋之景jpg.jpg" />
+    <Content Include="uploadimages\caizhai\采摘入口.jpg" />
     <Content Include="uploadimages\product\200991414164764067_京蜜.jpg" />
     <Content Include="uploadimages\product\201191614571795741_京香玉.jpg" />
     <Content Include="uploadimages\product\201282317715458_京香玉.jpg" />
@@ -218,12 +227,26 @@
     <Compile Include="caizhai.aspx.designer.cs">
       <DependentUpon>caizhai.aspx</DependentUpon>
     </Compile>
+    <Compile Include="caizhaidetail.aspx.cs">
+      <DependentUpon>caizhaidetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="caizhaidetail.aspx.designer.cs">
+      <DependentUpon>caizhaidetail.aspx</DependentUpon>
+    </Compile>
     <Compile Include="contactus.aspx.cs">
       <DependentUpon>contactus.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="contactus.aspx.designer.cs">
       <DependentUpon>contactus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Control\contactus.ascx.cs">
+      <DependentUpon>contactus.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Control\contactus.ascx.designer.cs">
+      <DependentUpon>contactus.ascx</DependentUpon>
     </Compile>
     <Compile Include="Control\footerANDbotnav.ascx.cs">
       <DependentUpon>footerANDbotnav.ascx</DependentUpon>
