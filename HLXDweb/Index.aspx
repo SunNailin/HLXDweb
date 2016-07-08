@@ -1,12 +1,12 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Index.aspx.cs" Inherits="HLXDweb.Index1" %>
 
-<%@ Register src="Control/footerANDbotnav.ascx" tagname="footerANDbotnav" tagprefix="uc1" %>
-
-<%@ Register src="Control/headerANDnav.ascx" tagname="headerANDnav" tagprefix="uc2" %>
-
+<%@ Register Src="Control/footerANDbotnav.ascx" TagName="footerANDbotnav" TagPrefix="uc1" %>
+<%@ Register Src="Control/headerANDnav.ascx" TagName="headerANDnav" TagPrefix="uc2" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+    <script src="jquery.js"></script>
+    <script src="jquery.cxscroll.js"></script>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>北京市豪联夏都农业科技发展有限公司</title>
     <link href="css/style.css" rel="stylesheet" type="text/css" />
@@ -94,7 +94,6 @@
     <div>
         <uc2:headerANDnav ID="headerANDnav1" runat="server" />
     </div>
-    
     <!--大图轮换-->
     <div id="KinSlideshow">
         <a href="intro.aspx" target="_parent">
@@ -121,24 +120,23 @@
                             href="#"><img src="images/more.jpg" width="35" height="20" alt="更多" /></a></span></h2>
                 <ul>
                     <li class="noMargin">
-                        <asp:GridView ID="gvNewNews" runat="server"  
-                            OnRowCreated="gvMain_RowCreated" AutoGenerateColumns="false" Bordercolor="White">
+                        <asp:GridView ID="gvNewNews" runat="server" OnRowCreated="gvMain_RowCreated" AutoGenerateColumns="false"
+                            BorderColor="White">
                             <Columns>
-                                <asp:TemplateField HeaderText="新闻标题" HeaderStyle-Font-Bold="false" ShowHeader="False">
+                                <asp:TemplateField HeaderText="新闻标题">
                                     <ItemTemplate>
                                         <a href='news.aspx?news_id=<%# Eval("news_id") %>' target="_parent" title='<%#Eval("news_title") %>'>
                                             [<%#Eval("news_type_name") %>]
                                             <%# StringTruncate(Eval("news_title").ToString(), 20, "...")%></a>
-                                    </ItemTemplate>                                   
-                                    <HeaderStyle Font-Bold="False" Height="0px"></HeaderStyle>
+                                    </ItemTemplate>
                                 </asp:TemplateField>
                                 <asp:TemplateField HeaderText="发布时间">
                                     <ItemTemplate>
-                                        <asp:Label ID="Label3" runat="server" Text='<%#  Eval("news_time")%>'><%#  Eval("news_time")%></asp:Label>
-                                    </ItemTemplate>                           
-                                    <HeaderStyle BackColor="White" Height="0px" />
+                                        <%# StringTruncate(Eval("news_time").ToString(), 10, "")%>
+                                    </ItemTemplate>
                                 </asp:TemplateField>
                             </Columns>
+                            <HeaderStyle Font-Bold="True" ForeColor="Green" />
                         </asp:GridView>
                     </li>
                 </ul>
@@ -162,7 +160,8 @@
                 </p>
             </div>
         </div>
-        <marquee behavior="scroll" contenteditable="true" scrollamount="20" scrolldelay="10" loop="10000"   hspace="10" vspace="10" onmouseover="this.stop()" onmouseout="this.start()">
+        <marquee behavior="scroll" contenteditable="true" scrollamount="10" scrolldelay="10"
+            loop="10000" hspace="10" vspace="10" onmouseover="this.stop()" onmouseout="this.start()">
         <ul class="conTop">
             <li>
                 <h2>

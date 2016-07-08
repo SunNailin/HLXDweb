@@ -18,22 +18,39 @@ namespace HLXDweb
             WebInfoManager wim = new WebInfoManager();
             Intro intro = new Intro();
             IntroManager introm = new IntroManager();
-            string intro_id = "3";
+            if (!Page.IsPostBack)
+            {
 
-            intro = introm.SelectByID(intro_id);
-            //绑定简介类别分类
-            repNewsType.DataSource = introm.SelectAll();
-            repNewsType.DataBind();
-            //联系我们边栏
-            string webinfo_id = "1";
-            string content = intro.Content;
-            //index_address = sqlstr1;
-            webinfo = wim.SelectByID(webinfo_id);
-            Label6.Text = webinfo.Address;
-            Label7.Text = webinfo.Postcode;
-            Label8.Text = content;
-            Label4.Text = webinfo.Contactor;
-            // Label5.Text = webinfo.Email;        
+                //第一次进入该页面时
+                //绑定所有新闻
+                string intro_id = Request.QueryString["intro_id"];
+                if (intro_id == null)
+                {
+                    intro = introm.SelectByID("3");
+                    Label8.Text = intro.Content;
+                    Label9.Text = intro.Title;  
+                }
+                else
+                {
+                    intro = introm.SelectByID(intro_id);
+                    Label8.Text = intro.Content;
+                    Label9.Text = intro.Title;
+                }
+
+
+                //绑定简介类别分类
+                repNewsType.DataSource = introm.SelectAll();
+                repNewsType.DataBind();
+                //联系我们边栏
+                string webinfo_id = "1";
+               //index_address = sqlstr1;
+                webinfo = wim.SelectByID(webinfo_id);
+                Label6.Text = webinfo.Address;
+                Label7.Text = webinfo.Postcode;
+                Label4.Text = webinfo.Contactor;
+                
+                // Label5.Text = webinfo.Email;        
+            }
         }
     }
 }

@@ -40,6 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin.cs" />
+    <Compile Include="AdminType.cs" />
     <Compile Include="FriendLink.cs">
       <SubType>Code</SubType>
     </Compile>

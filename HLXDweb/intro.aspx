@@ -51,7 +51,8 @@
                  豪联夏都简介<span>您现在所在的位置：<a href="index.aspx">首页</a> > 公司简介</span></h3>
             <div class="box">
                 <h4>
-                    园区概况</h4>
+                    <asp:Label ID="Label9" runat="server" Text="Label"></asp:Label>
+                </h4>
                 <br />
                 &nbsp;&nbsp;&nbsp; <asp:Label ID="Label8" runat="server" Text="Label"></asp:Label>
             </div>

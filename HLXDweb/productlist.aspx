@@ -20,7 +20,35 @@
             <h3>
                 产品展示<span>您现在所在的位置：<a href="#">首页</a> > 产品展示</span></h3>
             <div class="box">
-                <table width="100%" border="2px" cellpadding="2" cellspacing="1" bordercolor="Green">
+                <asp:GridView ID="gvProduct" runat="server" AutoGenerateColumns="False">
+                     <Columns>
+                        <asp:TemplateField HeaderText="名称">
+                            <ItemTemplate>
+                                <asp:Label ID="Label1" runat="server" Text='<%# Bind("product_name") %>'></asp:Label>
+                            </ItemTemplate>
+                            <HeaderStyle Font-Bold="True" Font-Size="15px" />
+                            <ItemStyle BackColor="White" Font-Size="15px" Height="30px" Width="50px" />
+                        </asp:TemplateField>
+                        <asp:TemplateField HeaderText="图片展示">
+                            <ItemTemplate>
+                            <img src='<%# Eval("product_picture1") %>' height="200px" width="200px" />
+                                <a href='news.aspx?news_id=<%# Eval("product_id") %>' target="_parent"  title='<%# Eval("product_id") %>'></a>
+                            </ItemTemplate>
+                            <HeaderStyle Font-Bold="True" Font-Size="15px" />
+                            <ItemStyle Font-Size="15px" Width="200px" />
+                        </asp:TemplateField>
+                        <asp:TemplateField HeaderText="品种简介">
+                            <ItemTemplate>
+                                <asp:Label ID="Label3" runat="server" Text='<%# Eval("product_content") %>'></asp:Label>
+                            </ItemTemplate>
+                            <HeaderStyle Font-Bold="True" Font-Size="15px" />
+                            <ItemStyle Font-Size="15px" Width="480px" />
+                        </asp:TemplateField>
+                    </Columns>
+                    <headerstyle backcolor="Green" font-bold="True" forecolor="White" />
+                </asp:GridView>
+                
+                <%--<table width="100%" border="2px" cellpadding="2" cellspacing="1" bordercolor="Green">
                     <tbody>
                         <tr>
                             <td align="center" style="word-spacing">
@@ -66,7 +94,7 @@
                             </td>
                         </tr>
                     </tbody>
-                </table>
+                </table>--%>
             </div>
         </div>
         <!-- InstanceEndEditable -->

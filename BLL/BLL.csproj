@@ -40,11 +40,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminManager.cs" />
+    <Compile Include="AdminTypeManager.cs" />
     <Compile Include="IntroManager.cs" />
     <Compile Include="NewsManager.cs" />
     <Compile Include="NewsTypeManager.cs" />
     <Compile Include="NoticeManager.cs" />
     <Compile Include="NoticeTypeManager.cs" />
+    <Compile Include="ProductManager.cs" />
     <Compile Include="ProductTypeManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WebInfoManager.cs" />

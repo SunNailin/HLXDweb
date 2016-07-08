@@ -48,34 +48,44 @@
             <div class="box">
                 <form id="Form1" runat="server">
                 <!--活动列表GridView-->
-                <asp:GridView ID="gvAllNotice" runat="server" AutoGenerateColumns="False" BorderColor="White"
-                    Width="697px">
+                <asp:GridView ID="gvAllNotice" runat="server" AutoGenerateColumns="False" 
+                    BorderColor="#CCCCCC" Width="733px" AllowPaging="True" PageSize="12" 
+                    BackColor="White" BorderStyle="None" BorderWidth="1px" CellPadding="4" 
+                    ForeColor="Black" GridLines="Horizontal">
                     <Columns>
                         <asp:TemplateField HeaderText="公告类别">
                             <ItemTemplate>
                                 <asp:Label ID="Label1" runat="server" Text='<%# Bind("notice_type_name") %>'></asp:Label>
                             </ItemTemplate>
-                            <ControlStyle Width="100px" />
+                            <ItemStyle Width="100px" />
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="公告标题">
                             <ItemTemplate>
                                 <a href='notice.aspx?notice_id=<%# Eval("notice_id") %>' target="_parent" title='<%# Eval("notice_title") %>'>
-                                    <%# StringTruncate(Eval("notice_title").ToString(), 10, "...")%></a>
+                                    <%# StringTruncate(Eval("notice_title").ToString(), 20, "...")%></a>
                             </ItemTemplate>
-                            <ControlStyle Width="400px" />
+                            <ItemStyle Width="400px" />
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="发布时间">
                             <ItemTemplate>
-                                <asp:Label ID="Label3" runat="server" Text='<%# StringTruncate( Eval("notice_time").ToString(),10,"" )%>'></asp:Label>
+                                <asp:Label ID="Label3" runat="server" Text='<%# StringTruncate( Eval("notice_time").ToString(),20,"" )%>'></asp:Label>
                             </ItemTemplate>
-                            <ControlStyle Width="120px" />
+                            <ItemStyle Width="200px" />
                         </asp:TemplateField>
                     </Columns>
+                    <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
+                    <HeaderStyle BackColor="Green" Font-Bold="True" ForeColor="White" />
+                    <PagerStyle BackColor="White" ForeColor="Black" HorizontalAlign="Right" />
+                    <SelectedRowStyle BackColor="#CC3333" Font-Bold="True" ForeColor="White" />
+                    <SortedAscendingCellStyle BackColor="#F7F7F7" />
+                    <SortedAscendingHeaderStyle BackColor="#4B4B4B" />
+                    <SortedDescendingCellStyle BackColor="#E5E5E5" />
+                    <SortedDescendingHeaderStyle BackColor="#242121" />
                 </asp:GridView>
                 <!--公告列表GridView结束-->
                 </form>
                 <div class="pageList">
-                    [1/1]页 本页[14]条 [ 首页 ] [ 上一页 ] [ <a href="#">下一页</a> ] [ 末页 ]
+                    
                 </div>
             </div>
         </div>

@@ -33,30 +33,42 @@
                 <form runat="server">
                 <!--新闻列表GridView-->
                 <asp:GridView ID="gvAllNews" runat="server" AutoGenerateColumns="False" 
-                    BorderColor="White" Width="700px" AllowPaging="true" PageSize="15">
+                    BorderColor="#CCCCCC" Width="733px" AllowPaging="True" PageSize="20" 
+                    BackColor="White" BorderStyle="None" BorderWidth="1px" CellPadding="4" 
+                    ForeColor="Black" GridLines="Horizontal"> 
                     <Columns>
-                        <asp:TemplateField HeaderText="新闻类别">
-                            <ItemTemplate>
-                                <asp:Label ID="Label1" runat="server" Text='<%# Bind("news_type_name") %>'></asp:Label>
+                        <asp:TemplateField HeaderText="新闻类别" >
+                            <ItemTemplate  >
+                                <asp:Label ID="Label1" runat="server" Text='<%# Bind("news_type_name") %>' ></asp:Label>
                             </ItemTemplate>
                             <HeaderStyle Font-Bold="True" Font-Size="15px" />
-                            <ItemStyle BackColor="White" Font-Size="15px" Height="30px" Width="150px" />
+                            <ItemStyle BackColor="White" Width="100px" HorizontalAlign="Center" 
+                                VerticalAlign="Middle" />
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="新闻标题">
                             <ItemTemplate>
-                                <a href='news.aspx?news_id=<%# Eval("news_id") %>' target="_parent"  title='<%# Eval("news_title") %>'><%# StringTruncate(Eval("news_title").ToString(), 25, "...")%></a>
+                                <a  href='news.aspx?news_id=<%# Eval("news_id") %>' target="_parent"  title='<%# Eval("news_title") %>' ><%# StringTruncate(Eval("news_title").ToString(), 25, "...")%></a>
                             </ItemTemplate>
                             <HeaderStyle Font-Bold="True" Font-Size="15px" />
-                            <ItemStyle Font-Size="15px" Width="400px" />
+                            <ItemStyle Width="400px" Font-Size="15px" />
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="发布时间">
                             <ItemTemplate>
                                 <asp:Label ID="Label3" runat="server" Text='<%#Eval("news_time").ToString()%>'></asp:Label>
                             </ItemTemplate>
                             <HeaderStyle Font-Bold="True" Font-Size="15px" />
-                            <ItemStyle Font-Size="15px" Width="150px" />
+                            <ItemStyle Width="200px" HorizontalAlign="Center" VerticalAlign="Middle" />
                         </asp:TemplateField>
                     </Columns>
+                    <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
+                    <HeaderStyle BackColor="Green" Font-Bold="True" ForeColor="White" />
+                    <PagerStyle BackColor="White" ForeColor="Black" HorizontalAlign="Right" />
+                    <SelectedRowStyle BackColor="#CC3333" Font-Bold="True" ForeColor="White" />
+                    <SortedAscendingCellStyle BackColor="#F7F7F7" />
+                    <SortedAscendingHeaderStyle BackColor="#4B4B4B" />
+                    <SortedDescendingCellStyle BackColor="#E5E5E5" />
+                    <SortedDescendingHeaderStyle BackColor="#242121" />
+                    
                 </asp:GridView>
                 <!--新闻列表GridView结束-->
                 </form>

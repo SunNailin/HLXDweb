@@ -56,6 +56,18 @@ namespace HLXDweb
                 Label6.Text = webinfo.Address;
                 Label7.Text = webinfo.Postcode;
                 Label4.Text = webinfo.Contactor;
+
+                string product_type_id = Request.QueryString["product_type_id"];
+                if (product_type_id == null)
+                {
+                    gvProduct.DataSource = new ProductManager().SelectAllProduct();
+                    gvProduct.DataBind();
+                }
+                else
+                {
+                    gvProduct.DataSource = new ProductManager().SelectProductByTypeID(product_type_id);
+                    gvProduct.DataBind();
+                }
             }
 
         }
