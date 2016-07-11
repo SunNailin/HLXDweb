@@ -65,6 +65,8 @@
     <Content Include="Control\NewsType.ascx" />
     <Content Include="css\style.css" />
     <Content Include="css\StyleSheet1.css" />
+    <Content Include="css\xgxt_login.css" />
+    <Content Include="demo.html" />
     <Content Include="HTMLPage1.htm" />
     <Content Include="images\201294103357857.jpg" />
     <Content Include="images\20151104113618875.jpg" />
@@ -138,6 +140,7 @@
     <Content Include="images\tit_bg_winemuseum.jpg" />
     <Content Include="Index.aspx" />
     <Content Include="intro.aspx" />
+    <Content Include="login.aspx" />
     <Content Include="maptest.aspx" />
     <Content Include="museum.aspx" />
     <Content Include="news.aspx" />
@@ -304,6 +307,13 @@
     </Compile>
     <Compile Include="intro.aspx.designer.cs">
       <DependentUpon>intro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
     </Compile>
     <Compile Include="maptest.aspx.cs">
       <DependentUpon>maptest.aspx</DependentUpon>
