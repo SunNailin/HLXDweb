@@ -43,6 +43,7 @@
     <Compile Include="AdminManager.cs" />
     <Compile Include="AdminTypeManager.cs" />
     <Compile Include="IntroManager.cs" />
+    <Compile Include="LoginManager.cs" />
     <Compile Include="NewsManager.cs" />
     <Compile Include="NewsTypeManager.cs" />
     <Compile Include="NoticeManager.cs" />

@@ -45,6 +45,7 @@
     <Compile Include="AdminTypeDAO.cs" />
     <Compile Include="FriLinkDAO.cs" />
     <Compile Include="IntroTypeDAO.cs" />
+    <Compile Include="LoginDAO.cs" />
     <Compile Include="NewsDAO.cs" />
     <Compile Include="NewsTypeDAO.cs" />
     <Compile Include="NoticeDAO.cs" />

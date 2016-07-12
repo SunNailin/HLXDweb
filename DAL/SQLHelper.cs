@@ -126,5 +126,25 @@ namespace DAL
             return dt;
         }
         #endregion
+
+        /// <summary>
+        /// 判断查询结果是否有返回值
+        /// </summary>
+        /// <param name="sql">查询语句</param>
+        /// <returns></returns>
+        public bool checkReturn(string cmdText, CommandType ct)
+        {
+            bool flag = false;
+            cmd = new SqlCommand(cmdText, GetConn());
+            cmd.CommandType = ct;
+            sdr = cmd.ExecuteReader();
+            if (sdr.Read())
+            {
+                flag = true;
+            }
+            sdr.Close();
+            return flag;
+        }
+
     }
 }

@@ -1,0 +1,12 @@
+/*@charset "utf-8";
+/* CSS Document */
+body
+{
+    margin: 0;
+    padding: 0;
+    font-family: "宋体";
+    font-size: 12px;
+    color: #606060;
+    background: url(../images/body_bg.jpg) no-repeat center top;
+}
+

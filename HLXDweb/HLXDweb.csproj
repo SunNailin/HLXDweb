@@ -66,6 +66,7 @@
     <Content Include="css\style.css" />
     <Content Include="css\StyleSheet1.css" />
     <Content Include="css\xgxt_login.css" />
+    <Content Include="css\manage.css" />
     <Content Include="demo.html" />
     <Content Include="HTMLPage1.htm" />
     <Content Include="images\201294103357857.jpg" />
@@ -141,10 +142,13 @@
     <Content Include="Index.aspx" />
     <Content Include="intro.aspx" />
     <Content Include="login.aspx" />
+    <Content Include="manage.aspx" />
     <Content Include="maptest.aspx" />
     <Content Include="museum.aspx" />
     <Content Include="news.aspx" />
     <Content Include="newslist.aspx" />
+    <Content Include="newslist_manage.aspx" />
+    <Content Include="newstype_manage.aspx" />
     <Content Include="notice.aspx" />
     <Content Include="noticelist.aspx" />
     <Content Include="product.aspx" />
@@ -315,6 +319,13 @@
     <Compile Include="login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="manage.aspx.cs">
+      <DependentUpon>manage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage.aspx.designer.cs">
+      <DependentUpon>manage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="maptest.aspx.cs">
       <DependentUpon>maptest.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -342,6 +353,20 @@
     </Compile>
     <Compile Include="newslist.aspx.designer.cs">
       <DependentUpon>newslist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="newslist_manage.aspx.cs">
+      <DependentUpon>newslist_manage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="newslist_manage.aspx.designer.cs">
+      <DependentUpon>newslist_manage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="newstype_manage.aspx.cs">
+      <DependentUpon>newstype_manage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="newstype_manage.aspx.designer.cs">
+      <DependentUpon>newstype_manage.aspx</DependentUpon>
     </Compile>
     <Compile Include="notice.aspx.cs">
       <DependentUpon>notice.aspx</DependentUpon>
