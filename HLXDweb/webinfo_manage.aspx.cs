@@ -7,11 +7,11 @@ using System.Web.UI.WebControls;
 
 namespace HLXDweb
 {
-    public partial class manage2 : System.Web.UI.Page
+    public partial class webinfo_manage : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-                       
+
         }
     }
 }

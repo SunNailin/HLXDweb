@@ -29,7 +29,7 @@ namespace Model
             get { return newsTypeName; }
             set { newsTypeName = value; }
         }
-
+        public NewsType() { }
         public NewsType(string newsTypeName)
         {
             this.newsTypeName = newsTypeName;

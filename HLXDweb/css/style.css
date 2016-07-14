@@ -331,6 +331,7 @@ a:hover
 {
     width: 214px;
     float: left;
+    height: 469px;
 }
 .listWrapL h2
 {
@@ -342,7 +343,7 @@ a:hover
 .listWrapL h5
 {
     height: 56px;
-    background: url(../images/tit_bg_jianjieleibie.jpg) no-repeat;
+    background: url(../images/tit_bg_houtaiguanli.jpg) no-repeat;
     text-indent: -999px;
 }
 
@@ -426,6 +427,7 @@ h3 span
     top: 23px;
     font-size: 12px;
     font-weight: normal;
+    left: 492px;
 }
 .listWrapL .box
 {

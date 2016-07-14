@@ -10,6 +10,6 @@
 namespace HLXDweb {
     
     
-    public partial class manage2 {
+    public partial class webinfo_manage {
     }
 }

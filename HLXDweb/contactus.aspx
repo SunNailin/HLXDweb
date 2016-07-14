@@ -37,7 +37,7 @@
     <h2 class="contact">
     <img src="images/tit_bg9.jpg" alt="联系我们"/></h2>
     微信公众号：haolianxiadu<br/>
-    <img src="" alt="豪联夏都" height="200px" width="200px"/><br/><br/>
+    <img src="images/hlxdwechat.jpg" alt="豪联夏都" height="200px" width="200px"/><br/><br/>
     地&nbsp&nbsp址：<asp:Label ID="lbl_address" runat="server" Text="Label"></asp:Label><br/><br/>
     邮&nbsp&nbsp编：<asp:Label ID="lbl_postcode" runat="server" Text="Label"></asp:Label><br/><br/>
     电&nbsp&nbsp话：<asp:Label ID="lbl_phone" runat="server" Text="Label"></asp:Label><br/><br/>

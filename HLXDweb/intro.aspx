@@ -20,8 +20,8 @@
     
     <div id="listWrap">
         <div class="listWrapL">
-            <h5>
-                简介类别</h5>
+            <h6>
+                简介类别</h6>
             <ul>
                 <asp:Repeater ID="repNewsType" runat="server">
                     <ItemTemplate>

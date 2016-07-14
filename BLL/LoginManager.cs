@@ -28,6 +28,11 @@ namespace BLL
             return lgdao.checkLogin(name,  pwd);
         }
         #endregion
+
+        public bool isLogined(string name)
+        {
+            return lgdao.isLogined(name);
+        }
     }
 
 

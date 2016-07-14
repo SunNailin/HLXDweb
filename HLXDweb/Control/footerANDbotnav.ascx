@@ -3,7 +3,7 @@
         <a href="index.aspx">网站首页</a><span>|</span><a href="newslist.aspx">公司新闻</a><span>|</span><a
             href="noticelist.aspx">活动公告</a><span>|</span><a href="admin.aspx">基地管理</a><span>|</span><a
                 href="vip.aspx">会员服务</a><span>|</span><a href="caizhai.aspx">住宿采摘</a><span>|</span><a
-                    href="product.aspx">产品展示</a><span>|</span><a href="intro.aspx">公司简介</a></div>
+                    href="product.aspx">产品展示</a><span>|</span><a href="intro.aspx">公司简介</a><span>|</span><a href="manage.aspx">网站管理</a></div>
 <div id="footer">
         <div class="foot">
             电话：<asp:Label ID="Label8" runat="server" Text="Label"></asp:Label>

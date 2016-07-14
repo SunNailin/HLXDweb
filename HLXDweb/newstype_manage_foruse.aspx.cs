@@ -10,15 +10,14 @@ using Model;
 
 namespace HLXDweb
 {
-    public partial class newstype_manager : System.Web.UI.Page
+    public partial class manage : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!Page.IsPostBack)
-            {
-                GView();
-            }
+                        
         }
+
+
 
         #region 添加类别
         //添加类别
@@ -73,15 +72,13 @@ namespace HLXDweb
         }
         #endregion
 
-        #region 编辑按钮点击事件
+
         protected void lkbtnUpdNTP_Click(object sender, GridViewEditEventArgs e)
         {
             this.gvNTP.EditIndex = e.NewEditIndex;
             GView();
         }
-        #endregion
 
-        #region gridview更新绑定数据
         private void GView()
         {
             NewsTypeManager ntpm = new NewsTypeManager();
@@ -89,25 +86,19 @@ namespace HLXDweb
             gvNTP.DataSource = dt;
             gvNTP.DataBind();
         }
-        #endregion
 
-        #region 激活编辑button的事件  
+
         protected void gvNTP_RowEditing(object sender, GridViewEditEventArgs e)
-        {
+        {//激活编辑button的事件  
             this.gvNTP.EditIndex = e.NewEditIndex;
             GView();
         }
-        #endregion
-
-        #region 取消编辑状态的事件  
         protected void gvNTP_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e)
         {//取消编辑状态的事件  
             gvNTP.EditIndex = -1;
             GView();
         }
-        #endregion
 
-        #region 执行更新
         protected void gvNTP_RowUpdating(object sender, GridViewUpdateEventArgs e)
         {//执行更新
             NewsTypeManager ntpm = new NewsTypeManager();
@@ -121,8 +112,7 @@ namespace HLXDweb
             gvNTP.EditIndex = -1;
             GView();
         }
-        #endregion
 
-
+      
     }
 }

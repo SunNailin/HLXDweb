@@ -19,12 +19,20 @@ namespace DAL
 
         public bool checkLogin(string name, string pwd)
         {
-
-
             bool flag = false;
             string sql_check = "select admin_loginname from admin where admin_loginname= '" + name + "' and admin_password='" + pwd + "'";
             flag = sqlhelper.checkReturn(sql_check, CommandType.Text);
             return flag;
+        }
+
+        public bool isLogined(string name)
+        {
+            bool flag = false;
+
+            string sqlstr = "select admin_loginname from admin where admin_loginname= '" + name + "' ";
+            flag = sqlhelper.checkReturn(sqlstr,CommandType.Text);
+            return flag;
+ 
         }
 
 
