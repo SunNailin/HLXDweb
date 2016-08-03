@@ -144,6 +144,7 @@
     <Content Include="Index.aspx" />
     <Content Include="intro.aspx" />
     <Content Include="js\editTable.js" />
+    <Content Include="list.html" />
     <Content Include="login.aspx" />
     <Content Include="manage.aspx" />
     <Content Include="newstype_manage.aspx" />

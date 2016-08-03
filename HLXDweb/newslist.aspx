@@ -1,14 +1,8 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="newslist.aspx.cs" Inherits="HLXDweb.newslist" %>
 
-<%@ Register src="Control/NewsType.ascx" tagname="NewsType" tagprefix="uc1" %>
-
-
-<%@ Register src="Control/footerANDbotnav.ascx" tagname="footerANDbotnav" tagprefix="uc2" %>
-
-
-<%@ Register src="Control/headerANDnav.ascx" tagname="headerANDnav" tagprefix="uc3" %>
-
-
+<%@ Register Src="Control/NewsType.ascx" TagName="NewsType" TagPrefix="uc1" %>
+<%@ Register Src="Control/footerANDbotnav.ascx" TagName="footerANDbotnav" TagPrefix="uc2" %>
+<%@ Register Src="Control/headerANDnav.ascx" TagName="headerANDnav" TagPrefix="uc3" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -23,8 +17,7 @@
 <body>
     <uc3:headerANDnav ID="headerANDnav1" runat="server" />
     <div id="listWrap">
-
-    <!--新闻分类以及联系方式-->
+        <!--新闻分类以及联系方式-->
         <!-- InstanceBeginEditable name="EditRegion3" -->
         <div class="listWrapR">
             <h3>
@@ -32,22 +25,21 @@
             <div class="box">
                 <form runat="server">
                 <!--新闻列表GridView-->
-                <asp:GridView ID="gvAllNews" runat="server" AutoGenerateColumns="False" 
-                    BorderColor="#CCCCCC" Width="733px" AllowPaging="True" PageSize="20" 
-                    BackColor="White" BorderStyle="None" BorderWidth="1px" CellPadding="4" 
-                    ForeColor="Black" GridLines="Horizontal"> 
+                <asp:GridView ID="gvAllNews" runat="server" AutoGenerateColumns="False" BorderColor="#CCCCCC"
+                    Width="733px" AllowPaging="True" PageSize="20" BackColor="White" BorderStyle="None"
+                    BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal">
                     <Columns>
-                        <asp:TemplateField HeaderText="新闻类别" >
-                            <ItemTemplate  >
-                                <asp:Label ID="Label1" runat="server" Text='<%# Bind("news_type_name") %>' ></asp:Label>
+                        <asp:TemplateField HeaderText="新闻类别">
+                            <ItemTemplate>
+                                <asp:Label ID="Label1" runat="server" Text='<%# Bind("news_type_name") %>'></asp:Label>
                             </ItemTemplate>
                             <HeaderStyle Font-Bold="True" Font-Size="15px" />
-                            <ItemStyle BackColor="White" Width="100px" HorizontalAlign="Center" 
-                                VerticalAlign="Middle" />
+                            <ItemStyle BackColor="White" Width="100px" HorizontalAlign="Center" VerticalAlign="Middle" />
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="新闻标题">
                             <ItemTemplate>
-                                <a  href='news.aspx?news_id=<%# Eval("news_id") %>' target="_parent"  title='<%# Eval("news_title") %>' ><%# StringTruncate(Eval("news_title").ToString(), 25, "...")%></a>
+                                <a href='news.aspx?news_id=<%# Eval("news_id") %>' target="_parent" title='<%# Eval("news_title") %>'>
+                                    <%# StringTruncate(Eval("news_title").ToString(), 25, "...")%></a>
                             </ItemTemplate>
                             <HeaderStyle Font-Bold="True" Font-Size="15px" />
                             <ItemStyle Width="400px" Font-Size="15px" />
@@ -68,18 +60,17 @@
                     <SortedAscendingHeaderStyle BackColor="#4B4B4B" />
                     <SortedDescendingCellStyle BackColor="#E5E5E5" />
                     <SortedDescendingHeaderStyle BackColor="#242121" />
-                    
                 </asp:GridView>
                 <!--新闻列表GridView结束-->
-                </form>
-                <div class="pageList">                  
+                <div class="pageList">
+                    jlaskfjalksjflakjsflkjaljflakjsflkaj
                 </div>
+                </form>
             </div>
         </div>
         <!-- InstanceEndEditable -->
         <uc1:NewsType ID="NewsType1" runat="server" />
     </div>
-             
     </div>
     <uc2:footerANDbotnav ID="footerANDbotnav1" runat="server" />
 </body>

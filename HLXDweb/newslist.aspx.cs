@@ -41,6 +41,7 @@ namespace HLXDweb
         }
         #endregion
 
+        #region 页面加载
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!Page.IsPostBack)
@@ -51,8 +52,12 @@ namespace HLXDweb
                 string news_type_id = Request.QueryString["news_type_id"];
                 if (news_type_id ==null)
                 {
+                    int currentPage, totalPage, newsPerPage, newsTotalNum;
+                    currentPage = 1;
+                    totalPage = 1; 
                     gvAllNews.DataSource = new NewsManager().SelectAllNews();
                     gvAllNews.DataBind();
+                    //lblPageShow.Text = "["+currentPage+"/"+totalPage+"]页 本页[14]条";
                 }
                 else
                 {
@@ -61,6 +66,7 @@ namespace HLXDweb
                 }
             }
         }
+        #endregion
 
     }
 }
